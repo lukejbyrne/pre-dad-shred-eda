@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as numpy
 import seaborn as sns
 
-# Load data
+#0 Load data
 data = pd.read_csv('data.csv')
 
 #1 Understanding the data
@@ -19,7 +19,7 @@ print(data['Gym'].unique())
 
 print("-------------------------")
 
-# Cleaning the data
+#2 Cleaning the data
 print("Cleaning the data")
 print("-----------------")
 
@@ -31,3 +31,11 @@ print(data.isnull().sum())
 #       - 
 
 print("-------------------------")
+
+# Remove unnecessary columns
+data_nocomments = data.drop(['Comments'])
+
+#TODO: Check and remove outliers
+
+#3 Relationship Analysis
+# Correlation Matrix
