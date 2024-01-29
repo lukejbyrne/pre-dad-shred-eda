@@ -7,9 +7,10 @@ import itertools
 def main():
     #0 Load data
     data = pd.read_csv('data.csv')
+    original_data = pd.read_csv('data.csv')
 
     while True:
-        print("Please enter: \n1 - Understand Data\n2 - Clean Data\n3 - Relationship Analysis\nq - Quit")
+        print("Please enter: \n1 - Understand Data\n2 - Clean Data\n3 - Relationship Analysis - Heatmap\43 - Relationship Analysis - Pairplot\n5 - Relationship Analysis - Scatterplot\n6 - Reset data\nq - Quit")
         user_input = input()
 
         if user_input == 'q':
@@ -24,9 +25,18 @@ def main():
             data = clean(data)
         elif user_input == '3':
             print("You entered 3")
-            relationships(data)
+            heatmap(data)
+        elif user_input == '4':
+            print("You entered 4")
+            pairplot(data)
+        elif user_input == '5':
+            print("You entered 5")
+            scatterplot(data)
+        elif user_input == '6':
+            print("You entered 6")
+            data = original_data
         else:
-            print("Invalid input. Please enter 1, 2, or 3.")
+            print("Invalid input. Please enter 1, 2, 3, 4 or 5.")
 
 def understand(data):
     #1 Understanding the data
@@ -50,13 +60,6 @@ def clean(data):
 
     try:
         print(data.isnull().sum())
-        #TODO: For next qnalysis update table to have weekly avg filled in (no NaN) or remove, probably one of each
-        #       - Change empty gym to 'None'
-        #       - Any weekly average to be back filled
-        #       - 
-        #       - 
-
-        print("-------------------------")
 
         # Remove unnecessary columns
         data = data.drop(['Comments'], axis=1)
@@ -65,21 +68,25 @@ def clean(data):
     except Exception as error:
         print("An exception occurred:", error)
 
+    print("-------------------------")
+
     return data
 
-def relationships(data):
-    #3 Relationship Analysis
+#3 Relationship Analysis
+def heatmap(data):
     # Correlation Matrix
     correlation = data.corr()
 
     # Heatmap: correlation between vars across matrix
-    plt.figure() 
     heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
+    plt.show()
 
+def pairplot(data):
     # Pairplot: array of plots for each pairs of vars in dataset
-    plt.figure()
     sns.pairplot(data)
+    plt.show()
 
+def scatterplot(data):
     # Scatterplot:
 
     # Define columns for scatterplot
