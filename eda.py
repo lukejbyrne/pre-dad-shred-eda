@@ -43,8 +43,18 @@ data_nocomments = data.drop(['Comments'], axis=1)
 correlation = data_nocomments.corr()
 
 # Heatmap: correlation between vars across matrix
-heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
-plt.show()
+# heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
+# plt.show()
 
 # # Pairplot: array of plots for each pairs of vars in dataset
-sns.pairplot(data_nocomments)
+# sns.pairplot(data_nocomments)
+
+# Scatterplot:
+# sns.relplot(x='Cardio (kcals from Fitbit)', y='Median Weight', hue='Gym', data=data_nocomments) # bad result
+# sns.relplot(x='Cardio (kcals from Fitbit)', y='Weight', hue='Gym', data=data_nocomments) # bad result? linear
+# sns.relplot(x='Cardio (kcals from Fitbit)', y='Weight', hue='Steps', data=data_nocomments) # bad result? linear
+# sns.relplot(x='Kcals in', y='Weight', hue='Gym', data=data_nocomments) # linear relationship at calories
+# sns.relplot(x='Kcals in', y='Weight', hue='Steps', data=data_nocomments) # linear relationship at calories
+# sns.relplot(x='Kcals in', y='Weight', hue='Cardio (kcals from Fitbit)', data=data_nocomments) # linear relationship at calories
+# sns.relplot(x='Kcals in', y='Weight', hue='Cardio (kcals from Fitbit)', data=data_nocomments) # linear relationship at calories
+# sns.relplot(x='Kcals in', y='Weight', hue='Weight', data=data_nocomments) # linear relationship at calories
