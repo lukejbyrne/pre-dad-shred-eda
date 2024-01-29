@@ -33,9 +33,11 @@ print(data.isnull().sum())
 print("-------------------------")
 
 # Remove unnecessary columns
-data_nocomments = data.drop(['Comments'])
+data_nocomments = data.drop(['Comments'], axis=1)
 
 #TODO: Check and remove outliers
 
 #3 Relationship Analysis
 # Correlation Matrix
+correlation = data_nocomments.corr()
+sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
