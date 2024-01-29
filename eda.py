@@ -3,14 +3,12 @@ import numpy as numpy
 import seaborn as sns
 import matplotlib.pyplot as plt
 import itertools
+import re
 
-def main():
-    #0 Load data
-    data = pd.read_csv('data.csv')
-    original_data = pd.read_csv('data.csv')
+def main(data, original_data):
 
     while True:
-        print("Please enter: \n1 - Understand Data\n2 - Clean Data\n3 - Relationship Analysis - Heatmap\43 - Relationship Analysis - Pairplot\n5 - Relationship Analysis - Scatterplot\n6 - Reset data\nq - Quit")
+        print("Please enter: \n1  - Understand Data\n2a - Clean (daily)\n2b - Clean Data (weekly)\n3  - Relationship Analysis - Heatmap\n4  - Relationship Analysis - Pairplot\n5  - Relationship Analysis - Scatterplot\nr  - Reset data\nq  - Quit")
         user_input = input()
 
         if user_input == 'q':
@@ -20,9 +18,9 @@ def main():
         if user_input == '1':
             print("You entered 1")
             understand(data)
-        elif user_input == '2':
+        elif user_input == '2a' or user_input == '2b':
             print("You entered 2")
-            data = clean(data)
+            data = clean(data, user_input)
         elif user_input == '3':
             print("You entered 3")
             heatmap(data)
@@ -32,8 +30,8 @@ def main():
         elif user_input == '5':
             print("You entered 5")
             scatterplot(data)
-        elif user_input == '6':
-            print("You entered 6")
+        elif user_input == 'r':
+            print("You entered r")
             data = original_data
         else:
             print("Invalid input. Please enter 1, 2, 3, 4 or 5.")
@@ -43,17 +41,21 @@ def understand(data):
     print("Understanding the data")
     print("----------------------")
 
-    print(data.head())
-    print(data.tail())
-    print(data.describe())
-    print(data.shape)
-    print(data.columns)
-    print(data.nunique())
-    print(data['Gym'].unique())
+    try:
+        print(data.head())
+        print(data.tail())
+        print(data.describe())
+        print(data.shape)
+        print(data.columns)
+        print(data.nunique())
+        print(data['Gym'].unique())
+
+    except Exception as error:
+        print("An exception occurred:", error)
 
     print("-------------------------")
 
-def clean(data):
+def clean(data, user_input):
     #2 Cleaning the data
     print("Cleaning the data")
     print("-----------------")
@@ -64,7 +66,23 @@ def clean(data):
         # Remove unnecessary columns
         data = data.drop(['Comments'], axis=1)
 
-        #TODO: Check and remove outliers
+        columns = data.columns.values.tolist()
+
+        weekly_cols = []
+
+        # Remove columns that include week
+        for i in columns:
+            if re.search('week', i, re.IGNORECASE) or re.search('median', i, re.IGNORECASE) or re.search('mean', i, re.IGNORECASE):
+                weekly_cols.append(i)
+                print(weekly_cols)
+
+        # Make a daily column list
+        if(user_input == "2a"):
+            data = data.drop(weekly_cols, axis=1)
+        # Make a weekly column list
+        elif(user_input == "2b"):
+            data = data[weekly_cols]
+
     except Exception as error:
         print("An exception occurred:", error)
 
@@ -111,4 +129,8 @@ def scatterplot(data):
     #TODO: wheres my date column gone for looking across time?
 
 if __name__ == "__main__":
-    main()
+     #0 Load data
+    data = pd.read_csv('data.csv')
+    original_data = pd.read_csv('data.csv')
+    
+    main(data, original_data)
