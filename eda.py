@@ -4,3 +4,14 @@ import seaborn as sns
 
 # Load data
 data = pd.read_csv('data.csv')
+
+#1 Understanding the data
+print(data.head())
+print(data.tail())
+print(data.describe())
+print(data.shape)
+print(data.columns)
+print(data.nunique())
+print(data['Gym'].unique())
+
+#TODO: update table to have weekly avg filled in (no NaN) or remove, probably one of each
