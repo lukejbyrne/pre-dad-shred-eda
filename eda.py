@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as numpy
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 #0 Load data
 data = pd.read_csv('data.csv')
@@ -40,4 +41,10 @@ data_nocomments = data.drop(['Comments'], axis=1)
 #3 Relationship Analysis
 # Correlation Matrix
 correlation = data_nocomments.corr()
-sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
+
+# Heatmap: correlation between vars across matrix
+heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
+plt.show()
+
+# # Pairplot: array of plots for each pairs of vars in dataset
+sns.pairplot(data_nocomments)
