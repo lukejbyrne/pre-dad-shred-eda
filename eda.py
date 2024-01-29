@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as numpy
 import seaborn as sns
 import matplotlib.pyplot as plt
+import itertools
 
 #0 Load data
 data = pd.read_csv('data.csv')
@@ -42,7 +43,7 @@ data_nocomments = data.drop(['Comments'], axis=1)
 # Correlation Matrix
 correlation = data_nocomments.corr()
 
-# Heatmap: correlation between vars across matrix
+# # Heatmap: correlation between vars across matrix
 # heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
 # plt.show()
 
@@ -50,11 +51,24 @@ correlation = data_nocomments.corr()
 # sns.pairplot(data_nocomments)
 
 # Scatterplot:
-sns.relplot(x='Cardio (kcals from Fitbit)', y='Median Weight', hue='Gym', data=data_nocomments) # bad result
-sns.relplot(x='Cardio (kcals from Fitbit)', y='Weight', hue='Gym', data=data_nocomments) # bad result? linear
-sns.relplot(x='Cardio (kcals from Fitbit)', y='Weight', hue='Steps', data=data_nocomments) # bad result? linear
-sns.relplot(x='Kcals in', y='Weight', hue='Gym', data=data_nocomments) # linear relationship at calories
-sns.relplot(x='Kcals in', y='Weight', hue='Steps', data=data_nocomments) # linear relationship at calories
-sns.relplot(x='Kcals in', y='Weight', hue='Cardio (kcals from Fitbit)', data=data_nocomments) # linear relationship at calories
-sns.relplot(x='Kcals in', y='Weight', hue='Cardio (kcals from Fitbit)', data=data_nocomments) # linear relationship at calories
-sns.relplot(x='Kcals in', y='Weight', hue='Weight', data=data_nocomments) # linear relationship at calories
+
+# Define columns for scatterplot
+scatter_columns = ['Gym', 'Gym Sessions', 'Cardio (kcals from Fitbit)', 'Weekly Cardio (kcals)',
+                   'Steps', 'Weekly Steps', 'Kcals out', 'Kcals in',
+                   'Weekly average (kcals)', 'Net Diff (kcals)', 'Weight',
+                   'Mean Weight', 'Median Weight', 'Weekly Body Weight loss %']
+
+# Create combinations of columns
+column_combinations = list(itertools.combinations(scatter_columns, 2))
+
+# Define hue for each scatterplot
+hue = 'Weight'
+
+# Iterate through each combination and plot it
+for i, (x_col, y_col) in enumerate(column_combinations):
+    sns.scatterplot(x=x_col, y=y_col, hue=hue, data=data_nocomments)
+    plt.show()
+
+# plt.show()
+
+#TODO: scatterplot for each potential grouping?
