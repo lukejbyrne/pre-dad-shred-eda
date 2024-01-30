@@ -25,11 +25,11 @@ def main(data, original_data):
             understand(data)
         elif user_input == '2a':
             print("You entered 2")
-            time_toggle = 'daily'
+            time_toggle = 'Daily'
             data = clean(data, user_input)            
         elif user_input == '2b':
             print("You entered 2")
-            time_toggle = 'weekly'
+            time_toggle = 'Weekly'
             data = clean(data, user_input)
         elif user_input == '3':
             print("You entered 3")
@@ -111,14 +111,12 @@ def heatmap(data):
     # Create 'weekly' / 'daily' directory if it doesn't exist
     os.makedirs(time_toggle, exist_ok=True)
     plt.savefig("{}/Heatmap.png".format(time_toggle))
-    # plt.savefig("{}/{}".format(time_toggle, plt.gcf().number))
-    plt.show()
 
 def pairplot(data):
     # Pairplot: array of plots for each pairs of vars in dataset
     sns.pairplot(data)
     plt.tight_layout()
-    plt.show()
+    plt.savefig("{}/Pairplot.png".format(time_toggle))
 
 def scatterplot(data):
     # Scatterplot:
@@ -129,13 +127,16 @@ def scatterplot(data):
     # Create combinations of columns
     column_combinations = list(itertools.combinations(columns, 3))
 
+    # Create 'weekly' / 'daily' directory if it doesn't exist
+    os.makedirs(time_toggle, exist_ok=True)
+
     # Iterate through each combination and plot it
     for i, (x_col, y_col, hue) in enumerate(column_combinations):
         plt.figure() 
         sns.scatterplot(x=x_col, y=y_col, hue=hue, data=data)
-
-    plt.tight_layout()
-    plt.show()
+        plt.tight_layout()
+        os.makedirs('{}/{}'.format(time_toggle,hue), exist_ok=True)
+        plt.savefig("{}/{}/Figure{}.png".format(time_toggle, hue, plt.gcf().number))
 
     #TODO: wheres my date column gone for looking across time? and then graphs / plots
 
