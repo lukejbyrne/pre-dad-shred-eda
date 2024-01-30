@@ -125,18 +125,23 @@ def scatterplot(data):
     columns = data.columns.values.tolist()
 
     # Create combinations of columns
-    column_combinations = list(itertools.combinations(columns, 3))
+    column_combinations = list(itertools.combinations(columns, 2))
 
     # Create 'weekly' / 'daily' directory if it doesn't exist
     os.makedirs(time_toggle, exist_ok=True)
-
+    
     # Iterate through each combination and plot it
-    for i, (x_col, y_col, hue) in enumerate(column_combinations):
-        plt.figure() 
-        sns.scatterplot(x=x_col, y=y_col, hue=hue, data=data)
-        plt.tight_layout()
-        os.makedirs('{}/{}'.format(time_toggle,hue), exist_ok=True)
-        plt.savefig("{}/{}/Figure{}.png".format(time_toggle, hue, plt.gcf().number))
+    for i in columns:
+        for j, (x_col, y_col) in enumerate(column_combinations):
+            if i != x_col and i != y_col:
+                print(f"{i} ----- {x_col} ----- {y_col}")
+                plt.figure() 
+                sns.scatterplot(x=x_col, y=y_col, hue=i, data=data)
+                plt.tight_layout()
+                os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
+                plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
+
+    #TODO: hue isnt consistent on how many are available...
 
     #TODO: wheres my date column gone for looking across time? and then graphs / plots
 
