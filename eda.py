@@ -18,9 +18,8 @@ def main(data, original_data):
 
         if user_input == 'q':
             print("Exiting...")
-            break  # Exit the loop if the user enters 'q'
-
-        if user_input == '1':
+            break
+        elif user_input == '1':
             print("You entered 1")
             understand(data)
         elif user_input == '2a':
