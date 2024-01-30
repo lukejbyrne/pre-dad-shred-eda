@@ -97,24 +97,23 @@ def heatmap(data):
 
     # Heatmap: correlation between vars across matrix
     heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
+    plt.tight_layout()
     plt.show()
 
 def pairplot(data):
     # Pairplot: array of plots for each pairs of vars in dataset
     sns.pairplot(data)
+    plt.tight_layout()
     plt.show()
 
 def scatterplot(data):
     # Scatterplot:
 
     # Define columns for scatterplot
-    scatter_columns = ['Gym', 'Gym Sessions', 'Cardio (kcals from Fitbit)', 'Weekly Cardio (kcals)',
-                    'Steps', 'Weekly Steps', 'Kcals out', 'Kcals in',
-                    'Weekly average (kcals)', 'Net Diff (kcals)', 'Weight',
-                    'Mean Weight', 'Median Weight', 'Weekly Body Weight loss %']
+    columns = data.columns.values.tolist()
 
     # Create combinations of columns
-    column_combinations = list(itertools.combinations(scatter_columns, 2))
+    column_combinations = list(itertools.combinations(columns, 2))
 
     # Define hue for each scatterplot
     hue = 'Weight'
@@ -124,9 +123,10 @@ def scatterplot(data):
         plt.figure() 
         sns.scatterplot(x=x_col, y=y_col, hue=hue, data=data)
 
+    plt.tight_layout()
     plt.show()
 
-    #TODO: wheres my date column gone for looking across time?
+    #TODO: wheres my date column gone for looking across time? and then graphs / plots
 
 if __name__ == "__main__":
      #0 Load data
