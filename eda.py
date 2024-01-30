@@ -113,13 +113,10 @@ def scatterplot(data):
     columns = data.columns.values.tolist()
 
     # Create combinations of columns
-    column_combinations = list(itertools.combinations(columns, 2))
-
-    # Define hue for each scatterplot
-    hue = 'Weight'
+    column_combinations = list(itertools.combinations(columns, 3))
 
     # Iterate through each combination and plot it
-    for i, (x_col, y_col) in enumerate(column_combinations):
+    for i, (x_col, y_col, hue) in enumerate(column_combinations):
         plt.figure() 
         sns.scatterplot(x=x_col, y=y_col, hue=hue, data=data)
 
