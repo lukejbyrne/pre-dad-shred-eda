@@ -4,12 +4,17 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import itertools
 import re
+import os
+
+# Toggle used to know whether the data is daily or weekly
+time_toggle = ''
 
 def main(data, original_data):
 
     while True:
         print("Please enter: \n1  - Understand Data\n2a - Clean (daily)\n2b - Clean Data (weekly)\n3  - Relationship Analysis - Heatmap\n4  - Relationship Analysis - Pairplot\n5  - Relationship Analysis - Scatterplot\nr  - Reset data\nq  - Quit")
         user_input = input()
+        global time_toggle
 
         if user_input == 'q':
             print("Exiting...")
@@ -18,8 +23,13 @@ def main(data, original_data):
         if user_input == '1':
             print("You entered 1")
             understand(data)
-        elif user_input == '2a' or user_input == '2b':
+        elif user_input == '2a':
             print("You entered 2")
+            time_toggle = 'daily'
+            data = clean(data, user_input)            
+        elif user_input == '2b':
+            print("You entered 2")
+            time_toggle = 'weekly'
             data = clean(data, user_input)
         elif user_input == '3':
             print("You entered 3")
@@ -74,7 +84,6 @@ def clean(data, user_input):
         for i in columns:
             if re.search('week', i, re.IGNORECASE) or re.search('median', i, re.IGNORECASE) or re.search('mean', i, re.IGNORECASE):
                 weekly_cols.append(i)
-                print(weekly_cols)
 
         # Make a daily column list
         if(user_input == "2a"):
@@ -86,6 +95,7 @@ def clean(data, user_input):
     except Exception as error:
         print("An exception occurred:", error)
 
+    print("New Cols:", weekly_cols)
     print("-------------------------")
 
     return data
@@ -98,6 +108,10 @@ def heatmap(data):
     # Heatmap: correlation between vars across matrix
     heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
     plt.tight_layout()
+    # Create 'weekly' / 'daily' directory if it doesn't exist
+    os.makedirs(time_toggle, exist_ok=True)
+    plt.savefig("{}/Heatmap.png".format(time_toggle))
+    # plt.savefig("{}/{}".format(time_toggle, plt.gcf().number))
     plt.show()
 
 def pairplot(data):
