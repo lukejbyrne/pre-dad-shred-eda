@@ -140,8 +140,6 @@ def scatterplot(data):
                 os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
                 plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
 
-    #TODO: hue isnt consistent on how many are available...
-
     #TODO: wheres my date column gone for looking across time? and then graphs / plots
 
 if __name__ == "__main__":
