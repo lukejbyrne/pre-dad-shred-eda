@@ -9,7 +9,7 @@ import os
 # Toggle used to know whether the data is daily or weekly
 time_toggle = ''
 
-def main(data, original_data):
+def main(df, original_df):
 
     while True:
         print("Please enter: \n1  - Understand Data\n2a - Clean (daily)\n2b - Clean Data (weekly)\n3  - Relationship Analysis - Heatmap\n4  - Relationship Analysis - Pairplot\n5  - Relationship Analysis - Scatterplot\n6  - Relationship Analysis - Histogram\n7  - Relationship Analysis - Catplot\nr  - Reset data\nq  - Quit")
@@ -21,67 +21,67 @@ def main(data, original_data):
             break
         elif user_input == '1':
             print("You entered 1")
-            understand(data)
+            understand(df)
         elif user_input == '2a':
             print("You entered 2")
             time_toggle = 'Daily'
-            data = clean(data, user_input)            
+            df = clean(df, user_input)            
         elif user_input == '2b':
             print("You entered 2")
             time_toggle = 'Weekly'
-            data = clean(data, user_input)
+            df = clean(df, user_input)
         elif user_input == '3':
             print("You entered 3")
-            heatmap(data)
+            heatmap(df)
         elif user_input == '4':
             print("You entered 4")
-            pairplot(data)
+            pairplot(df)
         elif user_input == '5':
             print("You entered 5")
-            scatterplot(data)        
+            scatterplot(df)        
         elif user_input == '6':
             print("You entered 6")
-            histogram(data)
+            histogram(df)
         elif user_input == '7':
             print("You entered 7")
-            catplot(data)
+            catplot(df)
         elif user_input == 'r':
             print("You entered r")
-            data = original_data
+            df = original_df
         else:
             print("Invalid input. Please try again.")
 
-def understand(data):
+def understand(df):
     #1 Understanding the data
     print("Understanding the data")
     print("----------------------")
 
     try:
-        print(data.head())
-        print(data.tail())
-        print(data.describe())
-        print(data.shape)
-        print(data.columns)
-        print(data.nunique())
-        print(data['Gym'].unique())
+        print(df.head())
+        print(df.tail())
+        print(df.describe())
+        print(df.shape)
+        print(df.columns)
+        print(df.nunique())
+        print(df['Gym'].unique())
 
     except Exception as error:
         print("An exception occurred:", error)
 
     print("-------------------------")
 
-def clean(data, user_input):
+def clean(df, user_input):
     #2 Cleaning the data
     print("Cleaning the data")
     print("-----------------")
 
     try:
-        print(data.isnull().sum())
+        print(df.isnull().sum())
 
         # Remove unnecessary columns
-        data = data.drop(['Comments'], axis=1)
+        df = df.drop(['Comments'], axis=1)
 
-        columns = data.columns.values.tolist()
+        columns = df.columns.values.tolist()
 
         weekly_cols = []
 
@@ -92,10 +92,10 @@ def clean(data, user_input):
 
         # Make a daily column list
         if(user_input == "2a"):
-            data = data.drop(weekly_cols, axis=1)
+            df = df.drop(weekly_cols, axis=1)
         # Make a weekly column list
         elif(user_input == "2b"):
-            data = data[weekly_cols]
+            df = df[weekly_cols]
 
     except Exception as error:
         print("An exception occurred:", error)
@@ -103,12 +103,12 @@ def clean(data, user_input):
     print("New Cols:", weekly_cols)
     print("-------------------------")
 
-    return data
+    return df
 
 #3 Relationship Analysis
-def heatmap(data):
+def heatmap(df):
     # Correlation Matrix
-    correlation = data.corr()
+    correlation = df.corr()
 
     # Heatmap: correlation between vars across matrix
     heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
@@ -117,15 +117,15 @@ def heatmap(data):
     os.makedirs(time_toggle, exist_ok=True)
     plt.savefig("{}/Heatmap.png".format(time_toggle))
 
-def pairplot(data):
+def pairplot(df):
     # Pairplot: array of plots for each pairs of vars in dataset
-    sns.pairplot(data)
+    sns.pairplot(df)
     plt.tight_layout()
     plt.savefig("{}/Pairplot.png".format(time_toggle))
 
-def scatterplot(data):
+def scatterplot(df):
     # Define columns
-    columns = data.columns.values.tolist()
+    columns = df.columns.values.tolist()
 
     # Create combinations of columns
     column_combinations = list(itertools.combinations(columns, 2))
@@ -139,38 +139,38 @@ def scatterplot(data):
             if i != x_col and i != y_col:
                 print(f"{i} ----- {x_col} ----- {y_col}")
                 plt.figure() 
-                sns.scatterplot(x=x_col, y=y_col, hue=i, data=data)
+                sns.scatterplot(x=x_col, y=y_col, hue=i, df=df)
                 plt.tight_layout()
                 os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
                 plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
 
     #TODO: wheres my date column gone for looking across time? and then graphs / plots
                 
-def histogram(data):
+def histogram(df):
     # Define columns
-    columns = data.columns.values.tolist()
+    columns = df.columns.values.tolist()
 
     for i in columns:
         plt.figure() 
-        sns.displot(data[i])
+        sns.displot(df[i])
         plt.tight_layout()
         os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
         plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
 
-def catplot(data):
+def catplot(df):
     # Define columns
-    columns = data.columns.values.tolist()
+    columns = df.columns.values.tolist()
 
     for i in columns:
         plt.figure() 
-        sns.catplot(x=i, kind = 'box', data=data)
+        sns.catplot(x=i, kind = 'box', df=df)
         plt.tight_layout()
         os.makedirs('{}/{}/{}'.format(time_toggle,'Catplot',i), exist_ok=True)
         plt.savefig("{}/{}/{}/Figure{}.png".format(time_toggle, 'Catplot', i, plt.gcf().number))
 
 if __name__ == "__main__":
      #0 Load data
-    data = pd.read_csv('data.csv')
-    original_data = pd.read_csv('data.csv')
+    df = pd.read_csv('data.csv')
+    original_df = pd.read_csv('data.csv')
     
-    main(data, original_data)
+    main(df, original_df)
