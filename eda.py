@@ -12,7 +12,7 @@ time_toggle = ''
 def main(data, original_data):
 
     while True:
-        print("Please enter: \n1  - Understand Data\n2a - Clean (daily)\n2b - Clean Data (weekly)\n3  - Relationship Analysis - Heatmap\n4  - Relationship Analysis - Pairplot\n5  - Relationship Analysis - Scatterplot\nr  - Reset data\nq  - Quit")
+        print("Please enter: \n1  - Understand Data\n2a - Clean (daily)\n2b - Clean Data (weekly)\n3  - Relationship Analysis - Heatmap\n4  - Relationship Analysis - Pairplot\n5  - Relationship Analysis - Scatterplot\n6  - Relationship Analysis - Histogram\n7  - Relationship Analysis - Catplot\nr  - Reset data\nq  - Quit")
         user_input = input()
         global time_toggle
 
@@ -38,12 +38,18 @@ def main(data, original_data):
             pairplot(data)
         elif user_input == '5':
             print("You entered 5")
-            scatterplot(data)
+            scatterplot(data)        
+        elif user_input == '6':
+            print("You entered 6")
+            histogram(data)
+        elif user_input == '7':
+            print("You entered 7")
+            catplot(data)
         elif user_input == 'r':
             print("You entered r")
             data = original_data
         else:
-            print("Invalid input. Please enter 1, 2, 3, 4 or 5.")
+            print("Invalid input. Please try again.")
 
 def understand(data):
     #1 Understanding the data
@@ -118,9 +124,7 @@ def pairplot(data):
     plt.savefig("{}/Pairplot.png".format(time_toggle))
 
 def scatterplot(data):
-    # Scatterplot:
-
-    # Define columns for scatterplot
+    # Define columns
     columns = data.columns.values.tolist()
 
     # Create combinations of columns
@@ -141,6 +145,28 @@ def scatterplot(data):
                 plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
 
     #TODO: wheres my date column gone for looking across time? and then graphs / plots
+                
+def histogram(data):
+    # Define columns
+    columns = data.columns.values.tolist()
+
+    for i in columns:
+        plt.figure() 
+        sns.displot(data[i])
+        plt.tight_layout()
+        os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
+        plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
+
+def catplot(data):
+    # Define columns
+    columns = data.columns.values.tolist()
+
+    for i in columns:
+        plt.figure() 
+        sns.catplot(x=i, kind = 'box', data=data)
+        plt.tight_layout()
+        os.makedirs('{}/{}/{}'.format(time_toggle,'Catplot',i), exist_ok=True)
+        plt.savefig("{}/{}/{}/Figure{}.png".format(time_toggle, 'Catplot', i, plt.gcf().number))
 
 if __name__ == "__main__":
      #0 Load data
