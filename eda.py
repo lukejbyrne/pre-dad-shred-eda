@@ -139,7 +139,7 @@ def scatterplot(df):
             if i != x_col and i != y_col:
                 print(f"{i} ----- {x_col} ----- {y_col}")
                 plt.figure() 
-                sns.scatterplot(x=x_col, y=y_col, hue=i, df=df)
+                sns.scatterplot(x=x_col, y=y_col, hue=i, data=df)
                 plt.tight_layout()
                 os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
                 plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
@@ -163,7 +163,7 @@ def catplot(df):
 
     for i in columns:
         plt.figure() 
-        sns.catplot(x=i, kind = 'box', df=df)
+        sns.catplot(x=i, kind = 'box', data=df)
         plt.tight_layout()
         os.makedirs('{}/{}/{}'.format(time_toggle,'Catplot',i), exist_ok=True)
         plt.savefig("{}/{}/{}/Figure{}.png".format(time_toggle, 'Catplot', i, plt.gcf().number))
