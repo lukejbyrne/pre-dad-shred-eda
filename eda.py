@@ -6,6 +6,8 @@ import itertools
 import re
 import os
 
+#TODO: Remove code duplication
+
 # Toggle used to know whether the data is daily or weekly
 time_toggle = ''
 
@@ -113,15 +115,18 @@ def heatmap(df):
     # Heatmap: correlation between vars across matrix
     heatmap = sns.heatmap(correlation, xticklabels=correlation.columns, yticklabels=correlation.columns, annot=True)
     plt.tight_layout()
+
     # Create 'weekly' / 'daily' directory if it doesn't exist
     os.makedirs(time_toggle, exist_ok=True)
-    plt.savefig("{}/Heatmap.png".format(time_toggle))
+    os.makedirs('{}/Heatmap'.format(time_toggle), exist_ok=True)
+    plt.savefig("{}/Heatmap/Figure{}.png".format(time_toggle, plt.gcf().number))
 
 def pairplot(df):
     # Pairplot: array of plots for each pairs of vars in dataset
     sns.pairplot(df)
     plt.tight_layout()
-    plt.savefig("{}/Pairplot.png".format(time_toggle))
+    os.makedirs('{}/Pairplot'.format(time_toggle), exist_ok=True)
+    plt.savefig("{}/Pairplot/Figure{}.png".format(time_toggle, plt.gcf().number))
 
 def scatterplot(df):
     # Define columns
@@ -141,11 +146,9 @@ def scatterplot(df):
                 plt.figure() 
                 sns.scatterplot(x=x_col, y=y_col, hue=i, data=df)
                 plt.tight_layout()
-                os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
-                plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
+                os.makedirs('{}/Scatterplot/{}'.format(time_toggle,i), exist_ok=True)
+                plt.savefig("{}/Scatterplot/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
 
-    #TODO: wheres my date column gone for looking across time? and then graphs / plots
-                
 def histogram(df):
     # Define columns
     columns = df.columns.values.tolist()
@@ -154,8 +157,8 @@ def histogram(df):
         plt.figure() 
         sns.displot(df[i])
         plt.tight_layout()
-        os.makedirs('{}/{}'.format(time_toggle,i), exist_ok=True)
-        plt.savefig("{}/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
+        os.makedirs('{}/Histogram/{}'.format(time_toggle,i), exist_ok=True)
+        plt.savefig("{}/Histogram/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
 
 def catplot(df):
     # Define columns
@@ -165,11 +168,11 @@ def catplot(df):
         plt.figure() 
         sns.catplot(x=i, kind = 'box', data=df)
         plt.tight_layout()
-        os.makedirs('{}/{}/{}'.format(time_toggle,'Catplot',i), exist_ok=True)
-        plt.savefig("{}/{}/{}/Figure{}.png".format(time_toggle, 'Catplot', i, plt.gcf().number))
+        os.makedirs('{}/Catplot/{}'.format(time_toggle,i), exist_ok=True)
+        plt.savefig("{}/Catplot/{}/Figure{}.png".format(time_toggle, i, plt.gcf().number))
 
 if __name__ == "__main__":
-     #0 Load data
+    #0 Load data
     df = pd.read_csv('data.csv')
     original_df = pd.read_csv('data.csv')
     
