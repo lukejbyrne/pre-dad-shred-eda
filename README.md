@@ -25,6 +25,10 @@ Each square shows the correlation between the variables on each axis. Correlatio
 ### Daily Trends
 ![Image Alt text](/Daily/Heatmap/Figure1.png "Daily Heatmap"))
 #### Exploratory
+
+example analysis: whereas theres a positive correlation with steps, how does this actually affect expenditure? well I seem to eat more with the negative correlation...
+
+
 | Variable | Variable | Correlation |
 |---|---|---|
 | Steps | Kcals out | 0.890501 |
