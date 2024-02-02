@@ -14,23 +14,82 @@ This analysis covers a variety of analytical tools under the guise of Explorator
 The resulting files I mention are under 5 data analysation methods each for 2 sets of data. My original data had a combination of daily and weekly values. This I opted to seperate to look distinctly at Daily and then Weekly. Within each of these I analysed:
 
 1) Heatmap
+Each square shows the correlation between the variables on each axis. Correlation ranges from -1 to +1. Values closer to zero means there is no linear trend between the two variables. The close to 1 the correlation is the more positively correlated they are; that is as one increases so does the other and the closer to 1 the stronger this relationship is. A correlation closer to -1 is similar, but instead of both increasing one variable will decrease as the other increases.
 2) Pair Plot
 3) Scatter Plot
 4) Histogram
 5) Cat Plot
 
 # Data Analysis
-## Daily Trends
-### Heatmap
-### Pair Plot
-### Scatter Plot
-### Histogram
-### Cat Plot
-## Weekly Trends
-### Heatmap
-### Pair Plot
-### Scatter Plot
-### Histogram
-### Cat Plot
+## Heatmap
+### Daily Trends
+#### Exploratory
+| Variable | Variable | Correlation |
+|---|---|---|
+| Steps | Kcals out | 0.890501 |
+| Kcals in | Net Diff (kcals) | 0.766737 |
+| Cardio (kcals from Fitbit) | Steps | 0.620473 |
+| Cardio (kcals from Fitbit) | Kcals out | 0.559458 |
+| Cardio (kcals from Fitbit) | Kcals in | 0.405526 |
+| Gym Sessions | Steps | 0.396649 |
+| Kcals out | Kcals in | 0.360828 |
+| Gym Sessions | Kcals out | 0.355770 |
+| Gym Sessions | Kcals in | 0.354038 |
+| Cardio (kcals from Fitbit) | Weight | 0.317056 |
+| Steps | Kcals in | 0.234515 |
+| Steps | Weight | 0.132588 |
+| Kcals out | Weight | 0.108954 |
+| Cardio (kcals from Fitbit) | Net Diff (kcals) | -0.011243 |
+| Gym Sessions | Cardio (kcals from Fitbit) | -0.027156 |
+| Gym Sessions | Weight | -0.044626 |
+| Kcals in | Weight | -0.067921 |
+| Net Diff (kcals) | Weight | -0.074647 |
+| Gym Sessions | Net Diff (kcals) | -0.130072 |
+| Kcals out | Net Diff (kcals) | -0.359683 |
+| Steps | Net Diff (kcals) | -0.438042 |
+
+##### Positive Correlations
+| Steps | Kcals out | 0.890501 |
+| Kcals in | Net Diff (kcals) | 0.766737 |
+
+##### Moderate Positive Correlations
+| Cardio (kcals from Fitbit) | Steps | 0.620473 |
+| Cardio (kcals from Fitbit) | Kcals out | 0.559458 |
+
+##### Weak Positive Correlations
+| Cardio (kcals from Fitbit) | Kcals in | 0.405526 |
+| Gym Sessions | Steps | 0.396649 |
+
+##### Moderate Negative Correlations
+| Kcals out | Net Diff (kcals) | -0.359683 |
+| Steps | Net Diff (kcals) | -0.438042 |
+
+#### Weight Correlations
+| Variable | Variable | Correlation |
+|---|---|---|
+| Cardio (kcals from Fitbit) | Weight | 0.317056 |
+| Steps | Weight | 0.132588 |
+| Kcals out | Weight | 0.108954 |
+| Gym Sessions | Weight | -0.044626 |
+| Kcals in | Weight | -0.067921 |
+| Net Diff (kcals) | Weight | -0.074647 |
+
+### Weekly Trends
+
+## Pair Plot
+### Daily Trends
+### Weekly Trends
+
+## Scatter Plot
+### Daily Trends
+### Weekly Trends
+
+## Histogram
+### Daily Trends
+### Weekly Trends
+
+## Cat Plot
+### Daily Trends
+### Weekly Trends
 
 # Conclusion

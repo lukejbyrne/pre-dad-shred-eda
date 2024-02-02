@@ -121,6 +121,8 @@ def heatmap(df):
     os.makedirs('{}/Heatmap'.format(time_toggle), exist_ok=True)
     plt.savefig("{}/Heatmap/Figure{}.png".format(time_toggle, plt.gcf().number))
 
+    print(correlation)
+
 def pairplot(df):
     # Pairplot: array of plots for each pairs of vars in dataset
     sns.pairplot(df)
