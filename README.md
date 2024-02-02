@@ -23,6 +23,7 @@ Each square shows the correlation between the variables on each axis. Correlatio
 # Data Analysis
 ## Heatmap
 ### Daily Trends
+![Image Alt text](/Daily/Heatmap/Figure1.png "Daily Heatmap"))
 #### Exploratory
 | Variable | Variable | Correlation |
 |---|---|---|
@@ -75,6 +76,7 @@ Each square shows the correlation between the variables on each axis. Correlatio
 | Net Diff (kcals) | Weight | -0.074647 |
 
 ### Weekly Trends
+![Image Alt text](/Weekly/Heatmap/Figure1.png "Weekly Heatmap"))
 #### Exploratory
 | Variable | Variable | Correlation |
 |---|---|---|
@@ -128,7 +130,9 @@ Each square shows the correlation between the variables on each axis. Correlatio
 
 ## Pair Plot
 ### Daily Trends
+![Image Alt text](/Daily/Pairplot/Figure136.png "Daily Pair Plot"))
 ### Weekly Trends
+![Image Alt text](/Weekly/Pairplot/Figure2.png "Weekly Pair Plot"))
 
 ## Scatter Plot
 ### Daily Trends
