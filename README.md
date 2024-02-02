@@ -75,6 +75,56 @@ Each square shows the correlation between the variables on each axis. Correlatio
 | Net Diff (kcals) | Weight | -0.074647 |
 
 ### Weekly Trends
+#### Exploratory
+| Variable | Variable | Correlation |
+|---|---|---|
+| Mean Weight | Median Weight | 0.999273 |
+| Weekly average (kcals) | Weekly Mean difference (kcals) | 0.868265 |
+| Weekly Cardio (kcals) | Weekly Steps | 0.749254 |
+| Weekly Steps | Median Weight | 0.321766 |
+| Weekly Steps | Mean Weight | 0.313640 |
+| Weekly Cardio (kcals) | Weekly average (kcals) | 0.310491 |
+| Weekly Cardio (kcals) | Median Weight | 0.264878 |
+| Weekly Cardio (kcals) | Mean Weight | 0.244940 |
+| Weekly average (kcals) | Median Weight | 0.013942 |
+| Weekly average (kcals) | Mean Weight | -0.010711 |
+| Weekly Steps | Weekly average (kcals) | -0.023569 |
+| Weekly Mean difference (kcals) | Median Weight | -0.080961 |
+| Weekly Mean difference (kcals) | Mean Weight | -0.104662 |
+| Weekly Cardio (kcals) | Weekly Mean difference (kcals) | -0.257348 |
+| Weekly Steps | Weekly Mean difference (kcals) | -0.426789 |
+
+##### Positive Correlations
+| Mean Weight | Median Weight | 0.999273 |
+| Weekly average (kcals) | Weekly Mean difference (kcals) | 0.868265 |
+| Weekly Cardio (kcals) | Weekly Steps | 0.749254 |
+
+##### Moderate Positive Correlations
+
+
+##### Weak Positive Correlations
+| Weekly Steps | Median Weight | 0.321766 |
+| Weekly Steps | Mean Weight | 0.313640 |
+| Weekly Cardio (kcals) | Weekly average (kcals) | 0.310491 |
+
+##### Moderate Negative Correlations
+| Weekly Cardio (kcals) | Weekly Mean difference (kcals) | -0.257348 |
+| Weekly Steps | Weekly Mean difference (kcals) | -0.426789 |
+
+#### Weight Correlations
+| Variable | Variable | Correlation |
+|---|---|---|
+| Mean Weight | Median Weight | 0.999273 |
+| Weekly Steps | Median Weight | 0.321766 |
+| Weekly Steps | Mean Weight | 0.313640 |
+| Weekly Cardio (kcals) | Median Weight | 0.264878 |
+| Weekly Cardio (kcals) | Mean Weight | 0.244940 |
+| Weekly average (kcals) | Median Weight | 0.013942 |
+| Weekly average (kcals) | Mean Weight | -0.010711 |
+| Weekly Mean difference (kcals) | Median Weight | -0.080961 |
+| Weekly Mean difference (kcals) | Mean Weight | -0.104662 |
+
+### Conclusion
 
 ## Pair Plot
 ### Daily Trends

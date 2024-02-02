@@ -121,6 +121,9 @@ def heatmap(df):
     os.makedirs('{}/Heatmap'.format(time_toggle), exist_ok=True)
     plt.savefig("{}/Heatmap/Figure{}.png".format(time_toggle, plt.gcf().number))
 
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.width', None)
     print(correlation)
 
 def pairplot(df):
