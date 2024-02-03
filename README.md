@@ -14,6 +14,9 @@ This analysis covers a variety of analytical tools under the guise of Explorator
 The resulting files I mention are under 5 data analysation methods each for 2 sets of data. My original data had a combination of daily and weekly values. This I opted to seperate to look distinctly at Daily and then Weekly. Within each of these I analysed:
 
 1) Heatmap
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html#pandas-dataframe-corr
+
+    By default utilises Pearson's correlation coefficient
 Each square shows the correlation between the variables on each axis. Correlation ranges from -1 to +1. Values closer to zero means there is no linear trend between the two variables. The close to 1 the correlation is the more positively correlated they are; that is as one increases so does the other and the closer to 1 the stronger this relationship is. A correlation closer to -1 is similar, but instead of both increasing one variable will decrease as the other increases.
 2) Pair Plot
 3) Scatter Plot
@@ -76,6 +79,8 @@ Gym sessions also had a week positive correlation to steps (0.40), which is to b
 | Kcals out | Net Diff (kcals) | -0.359683 |
 | Steps | Net Diff (kcals) | -0.438042 |
 
+Notable negative corelations existed between net difference in calories and calories out (-0.36) and net difference and steps (-0.44). The former can be ignored as an obvious byproduct of dieting where calories in are controlled by calories out are allowed to fluctuate. The latter is expected as the steps was positively correlated with calories out, if calories in are equated for then net difference gap would increase (as a negative value calculated as calories in - out), therefore creating a larger deficit. Interesitingly however this negative correlation is less than half of the positive between steps and calories in. I believe this to be because steps are correlated slightly positively with calories in (0.23), offsetting the large calorie expenditure by some.
+
 #### Weight Correlations
 | Variable | Variable | Correlation |
 |---|---|---|
@@ -85,6 +90,10 @@ Gym sessions also had a week positive correlation to steps (0.40), which is to b
 | Gym Sessions | Weight | -0.044626 |
 | Kcals in | Weight | -0.067921 |
 | Net Diff (kcals) | Weight | -0.074647 |
+
+As the purpose of this investigation is ultimately to uncover how to 'shred' better, it would go incomplete if the analysis of variables on weight were missed.
+
+It would appear from the findings that number of gym sessions, calories in, and net difference are negatively (albeit very slightly)
 
 ### Weekly Trends
 ![Image Alt text](/Weekly/Heatmap/Figure1.png "Weekly Heatmap"))
@@ -108,34 +117,41 @@ Gym sessions also had a week positive correlation to steps (0.40), which is to b
 | Weekly Steps | Weekly Mean difference (kcals) | -0.426789 |
 
 ##### Positive Correlations
-| Mean Weight | Median Weight | 0.999273 |
-| Weekly average (kcals) | Weekly Mean difference (kcals) | 0.868265 |
-| Weekly Cardio (kcals) | Weekly Steps | 0.749254 |
+With a correlation of 1.00 for mean and median, it's safe to assume that on a long term scale (e.g. 12 weeks) which of the averages you track is not important for accurate measurement. Often median can be favoured, but in this case the difference is negligable.
+
+Weekly calorie intake is highly correlateed with weekly mean difference of calories in - out (0.87). Therefore as intake increases the mean difference increases. This does not mean that more food = larger difference, quite the opposite, as the mean difference is from the reference of calorie intake (in - out), therefore an increase in difference actually means a smaller difference. Which is as expected for a larger calorie intake.
+
+Finally there is a correlation between weekly cardio and stepss (0.75) as expected, for the same reasons as the daily trends.
 
 ##### Moderate Positive Correlations
-
+There are no moderate positive correlations with the weekly data.
 
 ##### Weak Positive Correlations
-| Weekly Steps | Median Weight | 0.321766 |
-| Weekly Steps | Mean Weight | 0.313640 |
-| Weekly Cardio (kcals) | Weekly average (kcals) | 0.310491 |
+There is a weak positive correlation between weekly steps and median (0.32) and mean (0.31) weights. Further demostrating the negligable difference between both weight measurements.
+
+As with the daily trend analysis, cardio is also correlated with calorie intake (0.31).
 
 ##### Moderate Negative Correlations
 | Weekly Cardio (kcals) | Weekly Mean difference (kcals) | -0.257348 |
 | Weekly Steps | Weekly Mean difference (kcals) | -0.426789 |
 
+There is a moderate negative correlation between weekly steps and difference in calories (-0.42), displaying that as increase in steps causes a decrease in difference. As explained previously a decrease in weekly mean difference means a larger value as the value is negative. This could be expected as steps are correlated with higher calorie expenditure on the daily data, and are a source of expenditure. Again, it would be interesting to find how this would affect surrounding days. Does more cardio lead to more food the next day? Or does more food for the day/s prior lead to more cardio?
+
 #### Weight Correlations
-| Variable | Variable | Correlation |
+| Variable | Median Weight Correlation | Mean Weight Correlation |
 |---|---|---|
-| Mean Weight | Median Weight | 0.999273 |
-| Weekly Steps | Median Weight | 0.321766 |
-| Weekly Steps | Mean Weight | 0.313640 |
-| Weekly Cardio (kcals) | Median Weight | 0.264878 |
-| Weekly Cardio (kcals) | Mean Weight | 0.244940 |
-| Weekly average (kcals) | Median Weight | 0.013942 |
-| Weekly average (kcals) | Mean Weight | -0.010711 |
-| Weekly Mean difference (kcals) | Median Weight | -0.080961 |
-| Weekly Mean difference (kcals) | Mean Weight | -0.104662 |
+| Weekly Steps | 0.321766 | 0.313640 |
+| Weekly Cardio (kcals) | 0.264878 | 0.244940 |
+| Weekly average (kcals) | 0.013942 | -0.010711 |
+| Weekly Mean difference (kcals) | -0.080961 | -0.104662 |
+
+The weights in this table are formatted differently to the daily trends data as more insight appears to be able to be drawn when a third variable is added (i.e. allowing us to compare median and mean weights).
+
+Previously I had mentioned that it does not matter which average is use; mean and median. However upon inspection of the weight correlation results it would apear that each variable is more positively correlated with median weight than with mean. For example weekly average calorie intake is positive for median whilst negative for mean. Why?
+
+Additionally, if we analyse the data it would appear that there are no strong correlations between any variables and weight change. This would appear then to display that neither steps, cardio, calorie intake, nor calorie deficit have any correlation to a reduction in weight. However, it is important to realise that we are measuring correlation between variables. That is to say that we are measuring how the change in one affects another. Therefore if we maintain a calorie deficit of 2200kcal across time whilst our weight slowly decreases at say 1lb per week across the 12 week but the ['correlation between these variables would be 0'](docs/Weekly-Weight-Loss.txt), despite losing 12lbs.
+
+
 
 ### Conclusion
 
@@ -158,3 +174,8 @@ Gym sessions also had a week positive correlation to steps (0.40), which is to b
 ### Weekly Trends
 
 # Conclusion
+
+## TODO: Improvements
+- Absoluted negative values? | -x | == x
+- Add a column for number of gym sessions
+- Name better columns, e.g. deficit instead of weekly diff

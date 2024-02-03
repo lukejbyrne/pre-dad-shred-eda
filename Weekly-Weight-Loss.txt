@@ -1,0 +1,59 @@
+To calculate the Pearson correlation coefficient between the calories consumed and weight loss across 12 intervals where calories in are maintained at 2200 kcal and weight loss decreases by 1 each week, we need to establish the values for both variables.
+
+Let's denote:
+- Calories Consumed (Calories In): 2200 kcal (constant value)
+- Weight Loss: 180, 179, 178, ..., 169 (decreases by 1 each week for 12 intervals)
+
+Here are the values for the variables:
+
+Calories In: \( 2200, 2200, 2200, \ldots, 2200 \) (12 times)
+
+Weight Loss: \( 180, 179, 178, \ldots, 169 \) (12 times)
+
+The Pearson correlation coefficient (r) formula is:
+
+\[ r = \frac{\sum{(x_i - \bar{x})(y_i - \bar{y})}}{\sqrt{\sum{(x_i - \bar{x})^2} \sum{(y_i - \bar{y})^2}}} \]
+
+Where:
+- \( x_i \) is each value of the Calories In.
+- \( \bar{x} \) is the mean of the Calories In.
+- \( y_i \) is each value of the Weight Loss.
+- \( \bar{y} \) is the mean of the Weight Loss.
+
+To compute \( \bar{x} \) and \( \bar{y} \), we sum up all the values and divide by the number of values.
+
+Let's calculate:
+
+\[ \bar{x} = \frac{2200 + 2200 + \ldots + 2200}{12} = 2200 \]
+
+\[ \bar{y} = \frac{180 + 179 + \ldots + 169}{12} \]
+
+Now, let's calculate the numerator and the denominator of the Pearson correlation coefficient formula:
+
+\[ \text{Numerator} = \sum{(x_i - \bar{x})(y_i - \bar{y})} \]
+\[ \text{Denominator} = \sqrt{\sum{(x_i - \bar{x})^2} \sum{(y_i - \bar{y})^2}} \]
+
+After computing the numerator and denominator, we can find \( r \) by dividing the numerator by the denominator.
+
+Let's proceed with the calculations to find the Pearson correlation coefficient \( r \).
+
+First, let's compute \( \bar{y} \), the mean of the weight loss values:
+
+\[ \bar{y} = \frac{180 + 179 + 178 + \ldots + 169}{12} = \frac{12(180 + 169)}{2 \times 12} = \frac{12 \times 349}{24} = \frac{4188}{24} = 174.5 \]
+
+Now, let's calculate the numerator and the denominator of the Pearson correlation coefficient formula:
+
+Numerator:
+\[ \text{Numerator} = \sum{(x_i - \bar{x})(y_i - \bar{y})} \]
+\[ = (2200 - 2200)(180 - 174.5) + (2200 - 2200)(179 - 174.5) + \ldots + (2200 - 2200)(169 - 174.5) \]
+\[ = 0 \times 5.5 + 0 \times 4.5 + \ldots + 0 \times (-5.5) \]
+\[ = 0 \]
+
+Denominator:
+\[ \text{Denominator} = \sqrt{\sum{(x_i - \bar{x})^2} \sum{(y_i - \bar{y})^2}} \]
+\[ = \sqrt{(2200 - 2200)^2 + (2200 - 2200)^2 + \ldots + (2200 - 2200)^2} \times \sqrt{(180 - 174.5)^2 + (179 - 174.5)^2 + \ldots + (169 - 174.5)^2} \]
+\[ = \sqrt{0^2 + 0^2 + \ldots + 0^2} \times \sqrt{5.5^2 + 4.5^2 + \ldots + (-5.5)^2} \]
+\[ = 0 \times \sqrt{5.5^2 + 4.5^2 + \ldots + (-5.5)^2} \]
+\[ = 0 \]
+
+Since both the numerator and denominator are zero, the Pearson correlation coefficient \( r \) would be undefined. This means that there's no linear correlation between the calories consumed and weight loss in this scenario.
