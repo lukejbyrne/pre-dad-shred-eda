@@ -151,8 +151,6 @@ Previously I had mentioned that it does not matter which average is use; mean an
 
 Additionally, if we analyse the data it would appear that there are no strong correlations between any variables and weight change. This would appear then to display that neither steps, cardio, calorie intake, nor calorie deficit have any correlation to a reduction in weight. However, it is important to realise that we are measuring correlation between variables. That is to say that we are measuring how the change in one affects another. Therefore if we maintain a calorie deficit of 2200kcal across time whilst our weight slowly decreases at say 1lb per week across the 12 week but the ['correlation between these variables would be 0'](refs/Weekly-Weight-Loss.txt), despite losing 12lbs.
 
-
-
 ### Conclusion
 
 ## Pair Plot
