@@ -1,3 +1,23 @@
+# To Run
+Run eda.py in python3 to give the below main menu:
+``` Please enter: 
+1  - Understand Data
+2a - Clean (daily)
+2b - Clean Data (weekly)
+3  - Relationship Analysis - Heatmap
+4  - Relationship Analysis - Pairplot
+5  - Relationship Analysis - Scatterplot
+6  - Relationship Analysis - Histogram
+7  - Relationship Analysis - Catplot
+r  - Reset data
+q  - Quit
+```
+From this menu, to get the Heatmap for daily enter 2a to remove all non-daily columns, after which any of 3 -> 7 may be performed by entering the number when prompted. It does not matter in which order these are run as they do not interfere with one another.
+
+To then run weekly analysis, enter r to reset the columns, then 2b for the weekly data. 
+
+The resultant from each step is output into there associated folders, e.g. Daily/Heatmap (which are created if they do not already exist).
+
 # Introduction
 Before the birth of my son I sought to lose some weight under the knowledge that weight management would be at the back of my mind during his first few months of life. I meticulously documented this 12 week 'shred' across MyFitnessPal and an Apple Numbers workbook, noting key values in relation to calorie intake and expenditure.
 
