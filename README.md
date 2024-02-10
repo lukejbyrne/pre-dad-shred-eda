@@ -176,8 +176,54 @@ Additionally, if we analyse the data it would appear that there are no strong co
 ## Pair Plot
 ### Daily Trends
 ![Image Alt text](/Daily/Pairplot/Figure136.png "Daily Pair Plot"))
+| Variable 1 | Variable 2 | Correlation | Comments |
+|------------|------------|-------------|----------|
+| Gym Sessions | Cardio Calories from Fitbit | None | No clear correlation, suggesting gym sessions may not strongly relate to calories burned during cardio activities as per Fitbit. |
+| Gym Sessions | Steps | None | No correlation observed between gym sessions and the number of steps taken. |
+| Gym Sessions | Kcal (presumably calorie intake) | None | The plot indicates no discernible pattern, implying gym sessions may not be directly related to calorie intake. |
+| Gym Sessions | Kcals in (calories ingested) | None | Similar to the previous, no apparent correlation is observed. |
+| Gym Sessions | Net Kcals (calories burned vs. ingested) | None | Lack of a clear trend suggests gym sessions may not consistently affect net calories. |
+| Gym Sessions | Weight | None | No clear correlation, implying gym session frequency alone may not predict weight changes effectively. |
+| Cardio Calories from Fitbit | Steps | Slight positive | Suggests a slight positive correlation; as steps increase, cardio calories recorded by Fitbit also tend to increase. |
+| Cardio Calories from Fitbit | Kcal | None | No clear correlation found, indicating calories burned during cardio may not directly relate to overall calorie intake. |
+| Cardio Calories from Fitbit | Kcals in (calories ingested) | None | Lack of a clear pattern suggests a straightforward relationship between calories burned during cardio and calories ingested is not present. |
+| Cardio Calories from Fitbit | Net Kcals | Negative | Indicates a negative correlation; as net calories decrease (more burned than ingested), cardio calories from Fitbit tend to increase. |
+| Cardio Calories from Fitbit | Weight | None | No evident correlation observed, suggesting cardio calories from Fitbit may not directly impact weight changes. |
+| Steps | Kcal | None | No correlation between the number of steps and calorie intake. |
+| Steps | Kcals in (calories ingested) | None | Steps taken are not strongly related to calories ingested. |
+| Steps | Net Kcals | Slight negative | A slight negative correlation might be present; an increase in steps could possibly correspond to a decrease in net calories. |
+| Steps | Weight | None | Number of steps alone is not a direct predictor of weight changes. |
+| Kcal | Kcals in (calories ingested) | Positive | Likely a strong positive correlation as both variables are likely related, dealing with calorie intake. |
+| Kcal | Net Kcals | Negative | A negative correlation might be present; an increase in calorie intake could lead to an increase in net calorie surplus. |
+| Kcal | Weight | None | Calorie intake alone does not predict weight changes effectively. |
+| Kcals in (calories ingested) | Net Kcals | Negative | Likely a negative correlation; higher calorie ingestion might increase the net calorie surplus. |
+| Kcals in (calories ingested) | Weight | None | No clear pattern found, suggesting calorie ingestion doesn't straightforwardly relate to weight changes. |
+| Net Kcals (calories burned vs. ingested) | Weight | Slight negative | A slight negative correlation might exist; as net calories decrease (indicating a deficit), weight might also decrease. |
+
+
+In my analysis, I found that gym sessions alone didn't significantly impact cardio calorie burn or step count. However, increasing daily steps showed a slight positive correlation with higher cardio calorie expenditure, suggesting a focus on incorporating more physical activity throughout the day. Furthermore, increased expenditure correlated with slightly higher caloric intake, highlighting the importance of maintaining a balanced approach to diet and exercise. While no direct correlation was observed between caloric intake and weight changes, creating a moderate calorie deficit led to slight weight loss. This deficit, in turn, may have been influenced by a combination of increased physical activity and mindful dietary habits. Thus, managing net calories effectively becomes paramount for achieving sustained weight loss success.
+
 ### Weekly Trends
 ![Image Alt text](/Weekly/Pairplot/Figure2.png "Weekly Pair Plot"))
+| Variable 1 | Variable 2 | Correlation | Comments |
+|------------|------------|-------------|----------|
+| Weekly Cardio (kcal) | Weekly Steps | Positive | More steps may correlate with higher energy expenditure in calories. |
+| Weekly Cardio (kcal) | Weekly Average (kcal) | Positive | Higher cardio in kcal correlates with a higher weekly average caloric intake. |
+| Weekly Cardio (kcal) | Weekly Difference (kcal) | Negative | Higher cardio leads to a larger calorie deficit as weekly cardio increases. |
+| Weekly Cardio (kcal) | Mean Weight | None | No correlation between weekly cardio and mean weight, suggesting other factors affect weight. |
+| Weekly Cardio (kcal) | Median Weight | None | No clear trend between weekly cardio and median weight. |
+| Weekly Steps | Weekly Average (kcal) | None | No direct relationship between weekly steps and average caloric intake. |
+| Weekly Steps | Weekly Difference (kcal) | Negative | Increased steps may be associated with a calorie deficit. |
+| Weekly Steps | Mean Weight | None | Weekly steps do not show a direct correlation with mean weight. |
+| Weekly Steps | Median Weight | None | No clear correlation between weekly steps and median weight. |
+| Weekly Average (kcal) | Weekly Difference (kcal) | Negative | Higher caloric intake correlates with a reduced calorie deficit. |
+| Weekly Average (kcal) | Mean Weight | None | No clear correlation between average caloric intake and mean weight. |
+| Weekly Average (kcal) | Median Weight | None | No pattern between weekly average caloric intake and median weight. |
+| Weekly Difference (kcal) | Mean Weight | Positive | A calorie surplus is associated with a higher mean weight. |
+| Weekly Difference (kcal) | Median Weight | Positive | A calorie surplus correlates with a higher median weight. |
+| Mean Weight | Median Weight | Positive | Strong correlation as both are measures of central tendency from the same weight data. |
+
+This analysis suggests that while there is a positive correlation between cardio activity and steps with energy expenditure, these factors are not directly correlated with weight. Caloric intake and net calories are more directly related to weight changes, highlighting the need to balance diet and exercise in weight management.
 
 ## Scatter Plot
 ### Daily Trends
