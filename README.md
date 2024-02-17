@@ -28,7 +28,15 @@ To then run weekly analysis, enter r to reset the columns, then 2b for the weekl
 The resultant from each step is output into there associated folders, e.g. Daily/Heatmap (which are created if they do not already exist).
 
 # Introduction
-Before the birth of my son I sought to lose some weight under the knowledge that weight management would be at the back of my mind during his first few months of his life. I meticulously documented this 12 week 'shred' across MyFitnessPal and an Apple Numbers workbook, noting key values in relation to calorie intake and expenditure. Now having this data I thought it an informative exercise to learn from my mistakes for future 'cuts' / 'shreds' by find key measurements that influence expenditure and weigh loss.
+
+Before embarking on the challenging journey of fatherhood, I set about on a 12-week endeavor to manage my weight, fully aware that such personal goals might take a backseat amidst the new responsibilities. To navigate this journey effectively, I meticulously documented every aspect of my weight management routine using MyFitnessPal and Apple Numbers. This documentation covered a comprehensive array of metrics, including daily calorie intake, calories expended, and physical activity levels. 
+
+The primary aim of this self-imposed challenge was not just to achieve a personal goal but to forge a path that could serve as a blueprint for future endeavors. The meticulous documentation was intended to serve a dual purpose: first, as a means to closely monitor and adjust my efforts in real-time, and second, as a valuable dataset for post-journey analysis. With the data now in hand, the task ahead involves a thorough exploration to discern the patterns, behaviors, and strategies that were most effective, as well as those that were less so.
+
+In undertaking this analysis, the focus is not merely on the quantitative outcomes but also on the insights that can be gleaned to inform future weight management strategies. This involves an in-depth exploration of the relationship between various factors such as calorie intake, physical activity, and their cumulative effect on weight management over the course of the 12 weeks. By leveraging Exploratory Data Analysis (EDA) techniques, the goal is to unravel the complex interplay between these variables and to identify actionable insights that can guide future efforts.
+
+This journey is as much about learning from the past as it is about paving the way for future endeavors. It is an exercise in self-reflection, data analysis, and strategy formulation, all aimed at achieving a healthier, more balanced lifestyle. As we delve into the data, we embark on a journey of discovery, seeking to understand the nuances of weight management and to equip ourselves with the knowledge and tools necessary for sustained success.
+
 
 # Methodology
 
