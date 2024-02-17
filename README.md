@@ -382,9 +382,73 @@ Histograms for weekly data allow us to see the aggregated behavior over a longer
 In comparing the daily and weekly histograms, it's evident that the weekly data smooth out some of the daily variations but maintain the same overall patterns in behavior. The weekly perspective can be particularly useful for identifying long-term trends and ensuring that daily fluctuations do not obscure overall habits and outcomes.
 
 ## Cat Plot
-### Daily Trends
+### Daily Trend
+
+Catplots are useful for examining the distribution of a numerical variable across the levels of a categorical variable. Here's an analysis of the daily data catplots:
+
+#### Weight
+![Weight Catplot](sandbox:/mnt/data/catplots/Catplot/Weight/Figure424.png)
+- The catplot for weight likely shows variations across different categories, such as demographic groups or time periods. This visualization helps identify outliers or specific trends within subgroups.
+
+#### Gym Sessions
+![Gym Sessions Catplot](sandbox:/mnt/data/catplots/Catplot/Gym Sessions/Figure412.png)
+- The distribution of gym sessions can be seen across various categories with this catplot. It would be particularly useful for comparing the frequency of gym visits among different cohorts or across different days of the week.
+
+#### Net Diff (kcals)
+![Net Caloric Difference Catplot](sandbox:/mnt/data/catplots/Catplot/Net Diff (kcals)/Figure422.png)
+- This catplot may illustrate daily net caloric difference across categories such as meal types or activity levels. It can help in identifying dietary patterns that lead to a caloric surplus or deficit.
+
+#### Date
+![Date Catplot](sandbox:/mnt/data/catplots/Catplot/Date/Figure408.png)
+- A catplot for dates might show the frequency or distribution of another variable by date, which can be useful for tracking changes over time or identifying seasonal trends.
+
+#### Steps
+![Steps Catplot](sandbox:/mnt/data/catplots/Catplot/Steps/Figure416.png)
+- The catplot for daily steps allows us to compare activity levels across different groups or conditions. This can highlight variations in physical activity based on factors like work schedule or weather conditions.
+
+#### Gym
+![Gym Catplot](sandbox:/mnt/data/catplots/Catplot/Gym/Figure410.png)
+- Similar to the gym sessions catplot, this could reflect the number of individuals attending the gym across different categories, showing how gym attendance varies among different segments of the population.
+
+#### Kcals out
+![Calories Out Catplot](sandbox:/mnt/data/catplots/Catplot/Kcals out/Figure418.png)
+- This catplot for daily calories burned is useful for examining variations in energy expenditure across different categories, which could be influenced by varying levels of physical activity or exercise routines.
+
+#### Cardio (kcals from Fitbit)
+![Cardio Calories Catplot](sandbox:/mnt/data/catplots/Catplot/Cardio (kcals from Fitbit)/Figure414.png)
+- The calories burned during cardio as recorded by Fitbit devices can be compared across different user groups or timeframes to assess the impact of cardio activities on overall calorie expenditure.
+
+#### Kcals in
+![Caloric Intake Catplot](sandbox:/mnt/data/catplots/Catplot/Kcals in/Figure420.png)
+- This catplot visualizes daily caloric intake across different categories, which can be insightful for nutritional studies or to track the effectiveness of dietary interventions.
+
+These catplots offer a granular view of daily behaviors and can be used to detect patterns that might be specific to certain groups or time periods. When compared to the weekly data, they provide a more detailed snapshot, which can be essential for understanding day-to-day variability within the context of broader trends.
 
 ### Weekly Trends
+
+The weekly catplots allow for an examination of patterns and distributions over a longer time scale compared to daily catplots. Here's the analysis:
+
+#### Weekly Mean difference (kcals)
+![Weekly Mean Difference Catplot](sandbox:/mnt/data/catplots/Catplot/Weekly Mean difference (kcals)/Figure129.png)
+- This catplot may show the weekly mean difference in kcals across different categories, such as participant groups or weeks in a study. It can help identify which groups or time periods have higher or lower mean caloric differences compared to the daily analysis, which might show more variability.
+
+#### Weekly Body Weight loss %
+![Weekly Body Weight Loss Percentage Catplot](sandbox:/mnt/data/catplots/Catplot/Weekly Body Weight loss %/Figure135.png)
+- The catplot for weekly body weight loss percentage likely displays the distribution of weight loss across various categories. Comparing to daily data, this weekly aggregation could reveal more consistent trends in weight loss that are not as apparent in daily fluctuations.
+
+#### Weekly average (kcals)
+![Weekly Average Caloric Intake Catplot](sandbox:/mnt/data/catplots/Catplot/Weekly average (kcals)/Figure127.png)
+- This visualization provides insight into the average caloric intake on a weekly basis. Unlike daily caloric intake, which may be subject to day-to-day changes, the weekly view could present a more stable pattern of dietary behavior.
+
+#### Weekly Steps
+![Weekly Steps Catplot](sandbox:/mnt/data/catplots/Catplot/Weekly Steps/Figure125.png)
+- Weekly steps can be compared across categories to assess activity levels. While daily steps might be influenced by immediate factors like weather or schedule, weekly steps can smooth out these effects to show a clearer pattern of physical activity.
+
+#### Weekly Cardio (kcals)
+![Weekly Cardio Calories Catplot](sandbox:/mnt/data/catplots/Catplot/Weekly Cardio (kcals)/Figure123.png)
+- This catplot shows the calories burned from cardio activities on a weekly basis. The comparison to daily data might indicate whether individuals are consistently engaging in cardio activities throughout the week or if there's a tendency to concentrate activity on certain days.
+
+These catplots provide a more aggregated perspective on the participants' behaviors and trends. When compared to daily catplots, they can offer insights into the consistency of behaviors and outcomes over time, smoothing out daily variations to reveal broader patterns.
 
 # Conclusion
 
