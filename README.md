@@ -1,5 +1,5 @@
 # TL;DR
-In this analysis of a 12-week weight management journey documented through MyFitnessPal and Apple Numbers, we employed Exploratory Data Analysis (EDA) techniques to dissect daily and weekly data sets on calorie intake, expenditure, and physical activity. 
+In this analysis of a 12-week weight management journey documented through MyFitnessPal and Apple Numbers, we employed Exploratory Data Analysis (EDA) techniques to dissect daily and weekly data sets on calorie intake, expenditure, and physical activity.
 
 The study reveals a strong positive correlation (r=0.89) between steps taken and calories expended daily, underscoring the significant impact of walking on calorie burn. Weekly analysis echoed this pattern, showing a consistent relationship between physical activity levels and caloric output. Additionally, a notable finding was the strong correlation between daily calorie intake and net caloric difference (r=0.77), suggesting that higher food consumption did not deter a caloric deficit, likely due to an increase in non-exercise activity thermogenesis (NEAT). However, gym sessions showed only a weak to moderate correlation (r=0.36) with both calorie expenditure and intake, hinting at their lesser role in overall weight management compared to daily walking. 
 
