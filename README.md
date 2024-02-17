@@ -1,3 +1,10 @@
+# TL;DR
+In this analysis of a 12-week weight management journey documented through MyFitnessPal and Apple Numbers, we employed Exploratory Data Analysis (EDA) techniques to dissect daily and weekly data sets on calorie intake, expenditure, and physical activity. 
+
+The study reveals a strong positive correlation (r=0.89) between steps taken and calories expended daily, underscoring the significant impact of walking on calorie burn. Weekly analysis echoed this pattern, showing a consistent relationship between physical activity levels and caloric output. Additionally, a notable finding was the strong correlation between daily calorie intake and net caloric difference (r=0.77), suggesting that higher food consumption did not deter a caloric deficit, likely due to an increase in non-exercise activity thermogenesis (NEAT). However, gym sessions showed only a weak to moderate correlation with both calorie expenditure and intake, hinting at their lesser role in overall weight management compared to daily walking. 
+
+The analysis, enriched with visual aids like heatmaps and scatter plots, not only offers insights into effective weight management strategies but also enhances my coding and data science skills. This journey through data underscores the pivotal role of consistent, moderate activity—like walking—in achieving a caloric deficit and managing weight effectively.
+
 # Quickstart
 Run eda.py in python3 to give the below main menu:
 ``` Please enter: 
@@ -451,6 +458,13 @@ The weekly catplots allow for an examination of patterns and distributions over 
 These catplots provide a more aggregated perspective on the participants' behaviors and trends. When compared to daily catplots, they can offer insights into the consistency of behaviors and outcomes over time, smoothing out daily variations to reveal broader patterns.
 
 # Conclusion
+In summarizing the extensive 12-week weight management journey, this analysis through Exploratory Data Analysis (EDA) techniques has illuminated the substantial impact of daily physical activities, particularly walking, on caloric expenditure and weight management. The daily and weekly analyses consistently showcased a strong positive correlation between the number of steps taken and calories burned, reinforcing the importance of consistent, moderate activity in achieving a caloric deficit. Interestingly, while gym sessions contribute to overall fitness, their correlation with calorie expenditure and intake was relatively weak to moderate, suggesting that daily walking plays a more pivotal role in weight management.
+
+The notable correlation between increased calorie intake and a net caloric difference highlights the complex dynamics of eating more and its potential to not adversely affect, and possibly even support, a caloric deficit, likely through mechanisms such as NEAT. This insight challenges conventional wisdom and suggests a nuanced approach to dieting where caloric intake can be strategically managed to support weight loss efforts.
+
+Moreover, the analysis has not only offered valuable insights into effective weight management strategies but has also served as a learning journey in data science and coding skills enhancement. It underscores the importance of leveraging data to inform health and fitness strategies, providing a data-driven approach to understanding personal health and fitness behaviors.
+
+Future directions could involve refining data collection and analysis methods, such as incorporating more granular data on diet composition and exploring the impact of specific types of physical activity beyond walking and gym sessions. Additionally, further investigations could examine the psychological and behavioral aspects of diet and exercise to provide a more holistic view of weight management. This journey through data underscores the power of consistent, moderate activity and a balanced approach to diet in managing weight effectively, providing a foundation for future exploration and learning in the realms of health, fitness, and data science.
 
 ## TODO: Improvements
 - Absoluted negative values? | -x | == x
