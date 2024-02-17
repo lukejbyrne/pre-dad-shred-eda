@@ -3,7 +3,7 @@ In this analysis of a 12-week weight management journey documented through MyFit
 
 The study reveals a strong positive correlation (r=0.89) between steps taken and calories expended daily, underscoring the significant impact of walking on calorie burn. Weekly analysis echoed this pattern, showing a consistent relationship between physical activity levels and caloric output. Additionally, a notable finding was the strong correlation between daily calorie intake and net caloric difference (r=0.77), suggesting that higher food consumption did not deter a caloric deficit, likely due to an increase in non-exercise activity thermogenesis (NEAT). However, gym sessions showed only a weak to moderate correlation (r=0.36) with both calorie expenditure and intake, hinting at their lesser role in overall weight management compared to daily walking. 
 
-![Summary Viz](summary_viz.png "Summary Viz")
+![Summary Viz](results/summary_viz.png "Summary Viz")
 
 The analysis, enriched with visual aids like heatmaps and scatter plots, not only offers insights into effective weight management strategies but also enhances my coding and data science skills. This journey through data underscores the pivotal role of consistent, moderate activity—like walking—in achieving a caloric deficit and managing weight effectively.
 
@@ -45,7 +45,7 @@ The resulting files I mention are under 5 data analysation methods each for 2 se
 ## Heatmap Analysis
 
 ### Daily Trends
-![Daily Heatmap](/Daily/Heatmap/Figure1.png "Daily Heatmap")
+![Daily Heatmap](results/Daily/Heatmap/Figure1.png "Daily Heatmap")
 
 #### Exploratory Analysis
 The heatmap for daily trends reveals several correlations between variables related to dietary intake, physical activity, and weight. A positive correlation between steps and calories expended suggests that increased physical activity is a significant contributor to calorie expenditure. Interestingly, there is a negative correlation with net calorie difference, which could indicate that on days with more steps, there may be a tendency to consume more calories, potentially reducing the caloric deficit.
@@ -73,7 +73,7 @@ The negative correlation between net calorie difference and both steps and calor
 Analysis of variables affecting weight shows that cardio activity has a positive correlation, suggesting its potential role in weight management. Conversely, gym sessions and caloric intake show a slight negative correlation with weight, which could reflect the multifaceted nature of weight loss where diet and exercise habits must be considered together.
 
 ### Weekly Trends
-![Weekly Heatmap](/Weekly/Heatmap/Figure1.png "Weekly Heatmap")
+![Weekly Heatmap](results/Weekly/Heatmap/Figure1.png "Weekly Heatmap")
 
 #### Exploratory Analysis
 The weekly heatmap provides a broader view, smoothing out the daily variations to uncover longer-term trends. The strong correlation between mean and median weight confirms the reliability of these measures over an extended period.
@@ -101,7 +101,7 @@ Overall, both daily and weekly heatmaps offer valuable insights into the relatio
 
 ## Pair Plot
 ### Daily Trends
-![Image Alt text](/Daily/Pairplot/Figure136.png "Daily Pair Plot")
+![Image Alt text](results/Daily/Pairplot/Figure136.png "Daily Pair Plot")
 
 #### Observations
 
@@ -138,7 +138,7 @@ Overall, both daily and weekly heatmaps offer valuable insights into the relatio
 Overall, while some expected biological patterns are observed, such as the relationship between net calorie intake and weight, other variables do not show strong linear relationships. Caution should be used when interpreting these plots due to potential outliers and artifacts.
 
 ### Weekly Trends
-![Image Alt text](/Weekly/Pairplot/Figure2.png "Weekly Pair Plot")
+![Image Alt text](results/Weekly/Pairplot/Figure2.png "Weekly Pair Plot")
 
 This weekly pair plot extends the previous analysis of daily data to a weekly timeframe, providing insights into longer-term trends and patterns.
 
@@ -244,35 +244,35 @@ The analysis of weekly scatterplots reinforces the importance of examining data 
 Histograms are visual representations of the distribution of a dataset. Below is an analysis of the histograms for various variables of the daily data set:
 
 #### Weight
-![Weight Histogram](/Daily/Histogram/Weight/Figure406.png)
+![Weight Histogram](results/Daily/Histogram/Weight/Figure406.png)
 - The histogram for weight shows a distribution that might be normally distributed or slightly skewed to the right. The central tendency is around the middle of the x-axis, with no apparent outliers. This suggests a healthy variation in the population's weight.
 
 #### Gym Sessions
-![Gym Sessions Histogram](/Daily/Histogram/Gym%20Sessions/Figure394.png)
+![Gym Sessions Histogram](results/Daily/Histogram/Gym%20Sessions/Figure394.png)
 - The distribution of gym sessions is highly positively skewed, with most values clustered at the lower end. This indicates that most individuals have few gym sessions, with a small number attending the gym more frequently.
 
 #### Net Diff (kcals)
-![Net Caloric Difference Histogram](/Daily/Histogram/Net%20Diff%20(kcals)/Figure404.png)
+![Net Caloric Difference Histogram](results/Daily/Histogram/Net%20Diff%20(kcals)/Figure404.png)
 - This histogram appears to be somewhat symmetrical around the zero mark. A substantial number of individuals have a net caloric difference close to zero, suggesting a balance between caloric intake and expenditure.
 
 #### Steps
-![Steps Histogram](/Daily/Histogram/Steps/Figure398.png)
+![Steps Histogram](results/Daily/Histogram/Steps/Figure398.png)
 - The histogram for steps taken is positively skewed, showing that most people take a moderate number of steps, with a few individuals taking significantly more. This is a common pattern for physical activity data.
 
 #### Gym
-![Gym Histogram](/Daily/Histogram/Gym/Figure392.png)
+![Gym Histogram](results/Daily/Histogram/Gym/Figure392.png)
 - This histogram likely represents the frequency of gym attendance and appears to show a distribution similar to that of gym sessions, which is positively skewed.
 
 #### Kcals out
-![Calories Out Histogram](/Daily/Histogram/Kcals%20out/Figure400.png)
+![Calories Out Histogram](results/Daily/Histogram/Kcals%20out/Figure400.png)
 - The calories burned histogram is positively skewed, indicating that while most individuals burn a moderate amount of calories, there are a few who burn significantly more.
 
 #### Cardio (kcals from Fitbit)
-![Cardio Calories Histogram](/Daily/Histogram/Cardio%20(kcals%20from%20Fitbit)/Figure396.png)
+![Cardio Calories Histogram](results/Daily/Histogram/Cardio%20(kcals%20from%20Fitbit)/Figure396.png)
 - The distribution of calories burned during cardio activities, as recorded by Fitbit devices, is positively skewed. This suggests that most participants are not engaging in high-calorie-burning cardio activities frequently.
 
 #### Kcals in
-![Caloric Intake Histogram](/Daily/Histogram/Kcals%20in/Figure402.png)
+![Caloric Intake Histogram](results/Daily/Histogram/Kcals%20in/Figure402.png)
 - Caloric intake is normally distributed, which is typical for dietary data. There are no significant outliers, and the spread of calorie intake is moderate.
 
 ### Weekly Trends
@@ -280,23 +280,23 @@ Histograms are visual representations of the distribution of a dataset. Below is
 Histograms for weekly data allow us to see the aggregated behavior over a longer period than daily histograms. Here's an analysis of the weekly histograms, with references to the daily data where relevant:
 
 #### Weekly Mean difference (kcals)
-![Weekly Mean Difference Histogram](/Weekly/Histogram/Weekly%20Mean%20difference%20(kcals)/Figure115.png)
+![Weekly Mean Difference Histogram](results/Weekly/Histogram/Weekly%20Mean%20difference%20(kcals)/Figure115.png)
 - The histogram for the weekly mean difference in kcal shows a normal distribution centered around zero, similar to the daily net difference. This suggests that over a week, individuals tend to balance their caloric intake and expenditure.
 
 #### Weekly Body Weight loss %
-![Weekly Body Weight Loss Percentage Histogram](/Weekly/Histogram/Weekly%20Body%20Weight%20loss%20%25/Figure121.png)
+![Weekly Body Weight Loss Percentage Histogram](results/Weekly/Histogram/Weekly%20Body%20Weight%20loss%20%25/Figure121.png)
 - This histogram is skewed to the right, indicating that most individuals have a small percentage of weight loss per week, with a few experiencing higher percentages. This pattern is less evident in the daily weight histogram, which is more symmetric.
 
 #### Weekly average (kcals)
-![Weekly Average Caloric Intake Histogram](/Weekly/Histogram/Weekly%20average%20(kcals)/Figure113.png)
+![Weekly Average Caloric Intake Histogram](results/Weekly/Histogram/Weekly%20average%20(kcals)/Figure113.png)
 - The weekly average kcal intake appears to be normally distributed, suggesting consistent eating habits when viewed on a weekly basis compared to the daily kcal intake histogram, which also showed a normal distribution.
 
 #### Weekly Steps
-![Weekly Steps Histogram](/Weekly/Histogram/Weekly%20Steps/Figure111.png)
+![Weekly Steps Histogram](results/Weekly/Histogram/Weekly%20Steps/Figure111.png)
 - The distribution of weekly steps is positively skewed, much like the daily steps histogram. It indicates that while most people have a moderate level of activity, there are a few who are much more active.
 
 #### Weekly Cardio (kcals)
-![Weekly Cardio Calories Histogram](/Weekly/Histogram/Weekly%20Cardio%20(kcals)/Figure109.png)
+![Weekly Cardio Calories Histogram](results/Weekly/Histogram/Weekly%20Cardio%20(kcals)/Figure109.png)
 - Calories burned through cardio activities on a weekly basis are also positively skewed. This suggests that most people do not burn a high number of calories through cardio weekly, which is in line with the daily cardio calories histogram.
 
 ## Cat Plot
@@ -305,39 +305,39 @@ Histograms for weekly data allow us to see the aggregated behavior over a longer
 Catplots are useful for examining the distribution of a numerical variable across the levels of a categorical variable. Here's an analysis of the daily data catplots:
 
 #### Weight
-![Weight Catplot](/Daily/Catplot/Weight/Figure424.png)
+![Weight Catplot](results/Daily/Catplot/Weight/Figure424.png)
 - The catplot for weight likely shows variations across different categories, such as demographic groups or time periods. This visualization helps identify outliers or specific trends within subgroups.
 
 #### Gym Sessions
-![Gym Sessions Catplot](/Daily/Catplot/Gym%20Sessions/Figure412.png)
+![Gym Sessions Catplot](results/Daily/Catplot/Gym%20Sessions/Figure412.png)
 - The distribution of gym sessions can be seen across various categories with this catplot. It would be particularly useful for comparing the frequency of gym visits among different cohorts or across different days of the week.
 
 #### Net Diff (kcals)
-![Net Caloric Difference Catplot](/Daily/Catplot/Net%20Diff%20(kcals)/Figure422.png)
+![Net Caloric Difference Catplot](results/Daily/Catplot/Net%20Diff%20(kcals)/Figure422.png)
 - This catplot may illustrate daily net caloric difference across categories such as meal types or activity levels. It can help in identifying dietary patterns that lead to a caloric surplus or deficit.
 
 #### Date
-![Date Catplot](/Daily/Catplot/Date/Figure408.png)
+![Date Catplot](results/Daily/Catplot/Date/Figure408.png)
 - A catplot for dates might show the frequency or distribution of another variable by date, which can be useful for tracking changes over time or identifying seasonal trends.
 
 #### Steps
-![Steps Catplot](/Daily/Catplot/Steps/Figure416.png)
+![Steps Catplot](results/Daily/Catplot/Steps/Figure416.png)
 - The catplot for daily steps allows us to compare activity levels across different groups or conditions. This can highlight variations in physical activity based on factors like work schedule or weather conditions.
 
 #### Gym
-![Gym Catplot](/Daily/Catplot/Gym/Figure410.png)
+![Gym Catplot](results/Daily/Catplot/Gym/Figure410.png)
 - Similar to the gym sessions catplot, this could reflect the number of individuals attending the gym across different categories, showing how gym attendance varies among different segments of the population.
 
 #### Kcals out
-![Calories Out Catplot](/Daily/Catplot/Kcals%20out/Figure418.png)
+![Calories Out Catplot](results/Daily/Catplot/Kcals%20out/Figure418.png)
 - This catplot for daily calories burned is useful for examining variations in energy expenditure across different categories, which could be influenced by varying levels of physical activity or exercise routines.
 
 #### Cardio (kcals from Fitbit)
-![Cardio Calories Catplot](/Daily/Catplot/Cardio%20(kcals%20from%20Fitbit)/Figure414.png)
+![Cardio Calories Catplot](results/Daily/Catplot/Cardio%20(kcals%20from%20Fitbit)/Figure414.png)
 - The calories burned during cardio as recorded by Fitbit devices can be compared across different user groups or timeframes to assess the impact of cardio activities on overall calorie expenditure.
 
 #### Kcals in
-![Caloric Intake Catplot](/Daily/Catplot/Kcals%20in/Figure420.png)
+![Caloric Intake Catplot](results/Daily/Catplot/Kcals%20in/Figure420.png)
 - This catplot visualizes daily caloric intake across different categories, which can be insightful for nutritional studies or to track the effectiveness of dietary interventions.
 
 ### Weekly Trends
@@ -345,23 +345,23 @@ Catplots are useful for examining the distribution of a numerical variable acros
 The weekly catplots allow for an examination of patterns and distributions over a longer time scale compared to daily catplots. Here's the analysis:
 
 #### Weekly Mean difference (kcals)
-![Weekly Mean Difference Catplot](/Weekly/Catplot/Weekly%20Mean%20difference%20(kcals)/Figure129.png)
+![Weekly Mean Difference Catplot](results/Weekly/Catplot/Weekly%20Mean%20difference%20(kcals)/Figure129.png)
 - This catplot may show the weekly mean difference in kcals across different categories, such as participant groups or weeks in a study. It can help identify which groups or time periods have higher or lower mean caloric differences compared to the daily analysis, which might show more variability.
 
 #### Weekly Body Weight loss %
-![Weekly Body Weight Loss Percentage Catplot](/Weekly/Catplot/Weekly%20Body%20Weight%20loss%20%25/Figure135.png)
+![Weekly Body Weight Loss Percentage Catplot](results/Weekly/Catplot/Weekly%20Body%20Weight%20loss%20%25/Figure135.png)
 - The catplot for weekly body weight loss percentage likely displays the distribution of weight loss across various categories. Comparing to daily data, this weekly aggregation could reveal more consistent trends in weight loss that are not as apparent in daily fluctuations.
 
 #### Weekly average (kcals)
-![Weekly Average Caloric Intake Catplot](/Weekly/Catplot/Weekly%20average%20(kcals)/Figure127.png)
+![Weekly Average Caloric Intake Catplot](results/Weekly/Catplot/Weekly%20average%20(kcals)/Figure127.png)
 - This visualization provides insight into the average caloric intake on a weekly basis. Unlike daily caloric intake, which may be subject to day-to-day changes, the weekly view could present a more stable pattern of dietary behavior.
 
 #### Weekly Steps
-![Weekly Steps Catplot](/Weekly/Catplot/Weekly%20Steps/Figure125.png)
+![Weekly Steps Catplot](results/Weekly/Catplot/Weekly%20Steps/Figure125.png)
 - Weekly steps can be compared across categories to assess activity levels. While daily steps might be influenced by immediate factors like weather or schedule, weekly steps can smooth out these effects to show a clearer pattern of physical activity.
 
 #### Weekly Cardio (kcals)
-![Weekly Cardio Calories Catplot](/Weekly/Catplot/Weekly%20Cardio%20(kcals)/Figure123.png)
+![Weekly Cardio Calories Catplot](results/Weekly/Catplot/Weekly%20Cardio%20(kcals)/Figure123.png)
 - This catplot shows the calories burned from cardio activities on a weekly basis. The comparison to daily data might indicate whether individuals are consistently engaging in cardio activities throughout the week or if there's a tendency to concentrate activity on certain days.
 
 # Conclusion
