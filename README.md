@@ -46,7 +46,7 @@ Each square shows the correlation between the variables on each axis. Correlatio
 # Data Analysis
 ## Heatmap
 ### Daily Trends
-![Image Alt text](/Daily/Heatmap/Figure1.png "Daily Heatmap"))
+![Image Alt text](/Daily/Heatmap/Figure1.png "Daily Heatmap")
 #### Exploratory
 
 example analysis: whereas theres a positive correlation with steps, how does this actually affect expenditure? well I seem to eat more with the negative correlation...
@@ -116,7 +116,7 @@ As the purpose of this investigation is ultimately to uncover how to 'shred' bet
 It would appear from the findings that number of gym sessions, calories in, and net difference are negatively (albeit very slightly)
 
 ### Weekly Trends
-![Image Alt text](/Weekly/Heatmap/Figure1.png "Weekly Heatmap"))
+![Image Alt text](/Weekly/Heatmap/Figure1.png "Weekly Heatmap")
 #### Exploratory
 | Variable | Variable | Correlation |
 |---|---|---|
@@ -175,55 +175,82 @@ Additionally, if we analyse the data it would appear that there are no strong co
 
 ## Pair Plot
 ### Daily Trends
-![Image Alt text](/Daily/Pairplot/Figure136.png "Daily Pair Plot"))
-| Variable 1 | Variable 2 | Correlation | Comments |
-|------------|------------|-------------|----------|
-| Gym Sessions | Cardio Calories from Fitbit | None | No clear correlation, suggesting gym sessions may not strongly relate to calories burned during cardio activities as per Fitbit. |
-| Gym Sessions | Steps | None | No correlation observed between gym sessions and the number of steps taken. |
-| Gym Sessions | Kcal (presumably calorie intake) | None | The plot indicates no discernible pattern, implying gym sessions may not be directly related to calorie intake. |
-| Gym Sessions | Kcals in (calories ingested) | None | Similar to the previous, no apparent correlation is observed. |
-| Gym Sessions | Net Kcals (calories burned vs. ingested) | None | Lack of a clear trend suggests gym sessions may not consistently affect net calories. |
-| Gym Sessions | Weight | None | No clear correlation, implying gym session frequency alone may not predict weight changes effectively. |
-| Cardio Calories from Fitbit | Steps | Slight positive | Suggests a slight positive correlation; as steps increase, cardio calories recorded by Fitbit also tend to increase. |
-| Cardio Calories from Fitbit | Kcal | None | No clear correlation found, indicating calories burned during cardio may not directly relate to overall calorie intake. |
-| Cardio Calories from Fitbit | Kcals in (calories ingested) | None | Lack of a clear pattern suggests a straightforward relationship between calories burned during cardio and calories ingested is not present. |
-| Cardio Calories from Fitbit | Net Kcals | Negative | Indicates a negative correlation; as net calories decrease (more burned than ingested), cardio calories from Fitbit tend to increase. |
-| Cardio Calories from Fitbit | Weight | None | No evident correlation observed, suggesting cardio calories from Fitbit may not directly impact weight changes. |
-| Steps | Kcal | None | No correlation between the number of steps and calorie intake. |
-| Steps | Kcals in (calories ingested) | None | Steps taken are not strongly related to calories ingested. |
-| Steps | Net Kcals | Slight negative | A slight negative correlation might be present; an increase in steps could possibly correspond to a decrease in net calories. |
-| Steps | Weight | None | Number of steps alone is not a direct predictor of weight changes. |
-| Kcal | Kcals in (calories ingested) | Positive | Likely a strong positive correlation as both variables are likely related, dealing with calorie intake. |
-| Kcal | Net Kcals | Negative | A negative correlation might be present; an increase in calorie intake could lead to an increase in net calorie surplus. |
-| Kcal | Weight | None | Calorie intake alone does not predict weight changes effectively. |
-| Kcals in (calories ingested) | Net Kcals | Negative | Likely a negative correlation; higher calorie ingestion might increase the net calorie surplus. |
-| Kcals in (calories ingested) | Weight | None | No clear pattern found, suggesting calorie ingestion doesn't straightforwardly relate to weight changes. |
-| Net Kcals (calories burned vs. ingested) | Weight | Slight negative | A slight negative correlation might exist; as net calories decrease (indicating a deficit), weight might also decrease. |
+![Image Alt text](/Daily/Pairplot/Figure136.png "Daily Pair Plot")
 
+#### Observations
 
-In my analysis, I found that gym sessions alone didn't significantly impact cardio calorie burn or step count. However, increasing daily steps showed a slight positive correlation with higher cardio calorie expenditure, suggesting a focus on incorporating more physical activity throughout the day. Furthermore, increased expenditure correlated with slightly higher caloric intake, highlighting the importance of maintaining a balanced approach to diet and exercise. While no direct correlation was observed between caloric intake and weight changes, creating a moderate calorie deficit led to slight weight loss. This deficit, in turn, may have been influenced by a combination of increased physical activity and mindful dietary habits. Thus, managing net calories effectively becomes paramount for achieving sustained weight loss success.
+- **Gym Sessions and Cardio Calories from Fitbit**: There seems to be little to no correlation between the number of gym sessions and the calories burned during cardio as reported by a Fitbit device. The gym sessions histogram indicates that the data is skewed towards fewer sessions, suggesting that most participants do not frequent the gym often.
+
+- **Steps**: The distribution of steps taken is somewhat positively skewed, indicating that while most participants fall within a moderate range of steps, there are a few with very high step counts. There does not appear to be a strong linear relationship between steps and any other variables.
+
+- **Kcal vs. Cardio Calories and Steps**: The distribution of Kcal intake is roughly normal but shows some outliers or extreme values. The scatterplots do not suggest a clear correlation between Kcal intake and the calories burned during cardio or the number of steps taken.
+
+- **Weight**: Weight distribution appears to be slightly positively skewed, with a concentration of values in the middle of the range. There’s a potential positive correlation between weight and net Kcal, which would be biologically plausible as higher net calorie intake might be associated with higher body weight.
+
+- **Net Kcal (Kcals)**: The histogram of net Kcal shows a normal distribution with a slight negative skew. The negative values in net Kcal suggest that some individuals are in a calorie deficit. There is a visible positive correlation with weight, which is to be expected as typically a sustained calorie surplus would result in weight gain.
+
+#### Concerns
+
+- The presence of outliers, especially in the Kcal intake and net Kcal variables, could affect the correlations. It would be prudent to investigate these outliers to ensure they are not data entry errors.
+
+- The variables 'Cardio Calories from Fitbit' and 'Steps' have some data points that seem to lie on a straight line at certain intervals, which may indicate measurement or data entry artifacts that could warrant further investigation.
+
+#### Recommendations for Further Analysis
+
+- **Correlation Coefficients**: Calculate Pearson or Spearman correlation coefficients to quantify the strength and direction of the relationships between variables.
+
+- **Regression Analysis**: For variables that show potential correlations, perform regression analysis to understand the nature of their relationships better.
+
+- **Outlier Analysis**: Conduct an outlier analysis to identify and potentially remove or adjust for extreme values that could be influencing the results.
+
+- **Time Series Analysis**: If this data is time-series (daily data), analyzing it for trends, seasonality, or cycles could provide additional insights.
+
+- **Cluster Analysis**: To identify distinct patterns or groups within the data, a cluster analysis might be useful, especially if there are subgroups within the population that behave differently.
+
+- **Data Transformation**: For skewed distributions, consider transforming the data (e.g., log transformation) to meet the assumptions of parametric tests if they will be applied.
+
+Overall, while some expected biological patterns are observed, such as the relationship between net calorie intake and weight, other variables do not show strong linear relationships. Caution should be used when interpreting these plots due to potential outliers and artifacts.
 
 ### Weekly Trends
-![Image Alt text](/Weekly/Pairplot/Figure2.png "Weekly Pair Plot"))
-| Variable 1 | Variable 2 | Correlation | Comments |
-|------------|------------|-------------|----------|
-| Weekly Cardio (kcal) | Weekly Steps | Positive | More steps may correlate with higher energy expenditure in calories. |
-| Weekly Cardio (kcal) | Weekly Average (kcal) | Positive | Higher cardio in kcal correlates with a higher weekly average caloric intake. |
-| Weekly Cardio (kcal) | Weekly Difference (kcal) | Negative | Higher cardio leads to a larger calorie deficit as weekly cardio increases. |
-| Weekly Cardio (kcal) | Mean Weight | None | No correlation between weekly cardio and mean weight, suggesting other factors affect weight. |
-| Weekly Cardio (kcal) | Median Weight | None | No clear trend between weekly cardio and median weight. |
-| Weekly Steps | Weekly Average (kcal) | None | No direct relationship between weekly steps and average caloric intake. |
-| Weekly Steps | Weekly Difference (kcal) | Negative | Increased steps may be associated with a calorie deficit. |
-| Weekly Steps | Mean Weight | None | Weekly steps do not show a direct correlation with mean weight. |
-| Weekly Steps | Median Weight | None | No clear correlation between weekly steps and median weight. |
-| Weekly Average (kcal) | Weekly Difference (kcal) | Negative | Higher caloric intake correlates with a reduced calorie deficit. |
-| Weekly Average (kcal) | Mean Weight | None | No clear correlation between average caloric intake and mean weight. |
-| Weekly Average (kcal) | Median Weight | None | No pattern between weekly average caloric intake and median weight. |
-| Weekly Difference (kcal) | Mean Weight | Positive | A calorie surplus is associated with a higher mean weight. |
-| Weekly Difference (kcal) | Median Weight | Positive | A calorie surplus correlates with a higher median weight. |
-| Mean Weight | Median Weight | Positive | Strong correlation as both are measures of central tendency from the same weight data. |
+![Image Alt text](/Weekly/Pairplot/Figure2.png "Weekly Pair Plot")
 
-This analysis suggests that while there is a positive correlation between cardio activity and steps with energy expenditure, these factors are not directly correlated with weight. Caloric intake and net calories are more directly related to weight changes, highlighting the need to balance diet and exercise in weight management.
+This weekly pair plot extends the previous analysis of daily data to a weekly timeframe, providing insights into longer-term trends and patterns.
+
+#### Observations
+
+- **Weekly Cardio (kcal)**: The histogram for weekly cardio calories burned is positively skewed, indicating that most participants burn fewer calories per week, with a few outliers burning significantly more. This weekly pattern is consistent with the daily data, which also showed a positive skew.
+
+- **Weekly Steps**: Similar to the daily data, the weekly steps histogram is positively skewed. The scatterplots do not suggest a strong linear relationship between weekly steps and other variables, just like in the daily data.
+
+- **Weekly Average (kcal)**: The weekly average kcal intake shows a distribution that is less normal compared to the daily data, with a noticeable positive skew. This could suggest variability in eating habits on a weekly basis or reporting inconsistencies.
+
+- **Weekly Kcal Difference**: There's a noticeable range of differences in weekly kcal intake, with a histogram that is fairly symmetrical around zero, indicating that over a week, participants are as likely to be in a caloric surplus as they are to be in a deficit. This differs from the daily data, which showed a slight negative skew, suggesting more frequent daily deficits.
+
+- **Mean vs. Median Weight**: Both mean and median weight distributions are slightly positively skewed, similar to the daily weight observations. However, the weekly mean weight suggests a greater variance compared to the median weight, which could indicate the presence of outliers affecting the mean more than the median.
+
+#### Comparisons to Daily Data
+
+- The weekly data trends appear to follow the daily data trends closely, with similar distributions and patterns. This consistency suggests that the daily habits of individuals are aggregating into similar weekly patterns.
+
+- Weekly caloric difference being symmetrical suggests that day-to-day fluctuations in calorie intake and expenditure might balance out over the course of the week.
+
+- The absence of a strong linear relationship in the weekly data between variables such as steps and kcal intake is also observed in the daily data, suggesting that participants’ physical activity levels may not be closely linked to their caloric intake on both a daily and weekly basis.
+
+#### Recommendations for Further Analysis
+
+- **Compare Averages**: Conduct analysis comparing daily averages to weekly totals to understand how daily habits accumulate over the week.
+
+- **Longitudinal Analysis**: Perform a longitudinal analysis to see if there are consistent weekly patterns over time.
+
+- **Test for Differences**: Use statistical tests such as t-tests or ANOVAs to determine if there are significant differences between daily and weekly values.
+
+- **Correlation Analysis**: Calculate correlation coefficients for weekly data to confirm the lack of strong relationships seen in the scatterplots.
+
+- **Regression Models**: Develop regression models to predict weekly outcomes based on daily habits.
+
+- **Time Series Decomposition**: If this data spans a long time period, decompose the time series to identify and understand seasonal effects or long-term trends.
+
+In summary, the weekly data provides a broader view of participants’ behaviors, showing trends consistent with the daily data. It underscores the absence of strong relationships between activity levels and caloric intake/output, as well as the presence of outliers and variability in weekly patterns.
 
 ## Scatter Plot
 ### Daily Trends
