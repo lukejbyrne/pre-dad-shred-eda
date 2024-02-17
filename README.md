@@ -97,16 +97,6 @@ Analysis of variables affecting weight shows that cardio activity has a positive
 #### Exploratory Analysis
 The weekly heatmap provides a broader view, smoothing out the daily variations to uncover longer-term trends. The strong correlation between mean and median weight confirms the reliability of these measures over an extended period.
 
-Here's a snapshot of the correlations:
-
-| Variable | Variable | Correlation |
-|---|---|---|
-| Mean Weight | Median Weight | 0.999 |
-| Weekly average (kcals) | Weekly Mean difference (kcals) | 0.87 |
-| Weekly Cardio (kcals) | Weekly Steps | 0.75 |
-| ... | ... | ... |
-| Weekly Steps | Weekly Mean difference (kcals) | -0.43 |
-
 ##### Positive Correlations
 Weekly data suggests a consistent relationship between calorie intake and the mean difference of calories, reinforcing the daily findings. Additionally, the correlation between weekly cardio and steps indicates a sustained pattern of activity contributing to caloric expenditure.
 
