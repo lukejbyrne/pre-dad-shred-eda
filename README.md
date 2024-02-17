@@ -314,8 +314,74 @@ The analysis of weekly scatterplots reinforces the importance of examining data 
 
 ## Histogram
 ### Daily Trends
+# Daily Data Histogram Analysis
+
+Histograms are visual representations of the distribution of a dataset. Below is an analysis of the histograms for various variables of the daily data set:
+
+## Weight
+![Weight Histogram](sandbox:/mnt/data/histograms/Histogram/Weight/Figure406.png)
+- The histogram for weight shows a distribution that might be normally distributed or slightly skewed to the right. The central tendency is around the middle of the x-axis, with no apparent outliers. This suggests a healthy variation in the population's weight.
+
+## Gym Sessions
+![Gym Sessions Histogram](sandbox:/mnt/data/histograms/Histogram/Gym Sessions/Figure394.png)
+- The distribution of gym sessions is highly positively skewed, with most values clustered at the lower end. This indicates that most individuals have few gym sessions, with a small number attending the gym more frequently.
+
+## Net Diff (kcals)
+![Net Caloric Difference Histogram](sandbox:/mnt/data/histograms/Histogram/Net Diff (kcals)/Figure404.png)
+- This histogram appears to be somewhat symmetrical around the zero mark. A substantial number of individuals have a net caloric difference close to zero, suggesting a balance between caloric intake and expenditure.
+
+## Date
+![Date Histogram](sandbox:/mnt/data/histograms/Histogram/Date/Figure390.png)
+- It is unusual to have a histogram for dates, as they are not typically a variable that is distributed. This histogram might be indicating the frequency of data entries over time.
+
+## Steps
+![Steps Histogram](sandbox:/mnt/data/histograms/Histogram/Steps/Figure398.png)
+- The histogram for steps taken is positively skewed, showing that most people take a moderate number of steps, with a few individuals taking significantly more. This is a common pattern for physical activity data.
+
+## Gym
+![Gym Histogram](sandbox:/mnt/data/histograms/Histogram/Gym/Figure392.png)
+- This histogram likely represents the frequency of gym attendance and appears to show a distribution similar to that of gym sessions, which is positively skewed.
+
+## Kcals out
+![Calories Out Histogram](sandbox:/mnt/data/histograms/Histogram/Kcals out/Figure400.png)
+- The calories burned histogram is positively skewed, indicating that while most individuals burn a moderate amount of calories, there are a few who burn significantly more.
+
+## Cardio (kcals from Fitbit)
+![Cardio Calories Histogram](sandbox:/mnt/data/histograms/Histogram/Cardio (kcals from Fitbit)/Figure396.png)
+- The distribution of calories burned during cardio activities, as recorded by Fitbit devices, is positively skewed. This suggests that most participants are not engaging in high-calorie-burning cardio activities frequently.
+
+## Kcals in
+![Caloric Intake Histogram](sandbox:/mnt/data/histograms/Histogram/Kcals in/Figure402.png)
+- Caloric intake is normally distributed, which is typical for dietary data. There are no significant outliers, and the spread of calorie intake is moderate.
+
+These histograms provide a snapshot of the daily behaviors and outcomes of the individuals in the dataset. Notably, the skewness in the physical activity-related histograms (gym sessions, steps, kcals out) highlights the variation in activity levels among individuals, while the symmetry in the net calorie difference suggests a balance in caloric intake and expenditure for most individuals.
 
 ### Weekly Trends
+# Weekly Data Histogram Analysis
+
+Histograms for weekly data allow us to see the aggregated behavior over a longer period than daily histograms. Here's an analysis of the weekly histograms, with references to the daily data where relevant:
+
+## Weekly Mean difference (kcals)
+![Weekly Mean Difference Histogram](sandbox:/mnt/data/histograms/Histogram/Weekly Mean difference (kcals)/Figure115.png)
+- The histogram for the weekly mean difference in kcal shows a normal distribution centered around zero, similar to the daily net difference. This suggests that over a week, individuals tend to balance their caloric intake and expenditure.
+
+## Weekly Body Weight loss %
+![Weekly Body Weight Loss Percentage Histogram](sandbox:/mnt/data/histograms/Histogram/Weekly Body Weight loss %/Figure121.png)
+- This histogram is skewed to the right, indicating that most individuals have a small percentage of weight loss per week, with a few experiencing higher percentages. This pattern is less evident in the daily weight histogram, which is more symmetric.
+
+## Weekly average (kcals)
+![Weekly Average Caloric Intake Histogram](sandbox:/mnt/data/histograms/Histogram/Weekly average (kcals)/Figure113.png)
+- The weekly average kcal intake appears to be normally distributed, suggesting consistent eating habits when viewed on a weekly basis compared to the daily kcal intake histogram, which also showed a normal distribution.
+
+## Weekly Steps
+![Weekly Steps Histogram](sandbox:/mnt/data/histograms/Histogram/Weekly Steps/Figure111.png)
+- The distribution of weekly steps is positively skewed, much like the daily steps histogram. It indicates that while most people have a moderate level of activity, there are a few who are much more active.
+
+## Weekly Cardio (kcals)
+![Weekly Cardio Calories Histogram](sandbox:/mnt/data/histograms/Histogram/Weekly Cardio (kcals)/Figure109.png)
+- Calories burned through cardio activities on a weekly basis are also positively skewed. This suggests that most people do not burn a high number of calories through cardio weekly, which is in line with the daily cardio calories histogram.
+
+In comparing the daily and weekly histograms, it's evident that the weekly data smooth out some of the daily variations but maintain the same overall patterns in behavior. The weekly perspective can be particularly useful for identifying long-term trends and ensuring that daily fluctuations do not obscure overall habits and outcomes.
 
 ## Cat Plot
 ### Daily Trends
