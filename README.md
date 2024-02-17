@@ -79,16 +79,6 @@ The script facilitates relationship analysis through various visualization techn
 #### Exploratory Analysis
 The heatmap for daily trends reveals several correlations between variables related to dietary intake, physical activity, and weight. A positive correlation between steps and calories expended suggests that increased physical activity is a significant contributor to calorie expenditure. Interestingly, there is a negative correlation with net calorie difference, which could indicate that on days with more steps, there may be a tendency to consume more calories, potentially reducing the caloric deficit.
 
-Here's a summary of the correlations:
-
-| Variable | Variable | Correlation |
-|---|---|---|
-| Steps | Kcals out | 0.89 |
-| Kcals in | Net Diff (kcals) | 0.77 |
-| Cardio (kcals from Fitbit) | Steps | 0.62 |
-| ... | ... | ... |
-| Steps | Net Diff (kcals) | -0.44 |
-
 ##### Positive Correlations
 The data suggests that the primary method of increasing caloric expenditure is through increased step count rather than through structured gym sessions or cardio workouts. This aligns with previous findings that NEAT plays a significant role in daily energy expenditure. For gym sessions, the correlation with weekly data may provide additional insights into the role of structured exercise in caloric balance.
 
