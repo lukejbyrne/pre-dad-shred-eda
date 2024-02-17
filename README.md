@@ -264,10 +264,6 @@ Histograms are visual representations of the distribution of a dataset. Below is
 ![Net Caloric Difference Histogram](/Daily/Histogram/Net%20Diff%20(kcals)/Figure404.png)
 - This histogram appears to be somewhat symmetrical around the zero mark. A substantial number of individuals have a net caloric difference close to zero, suggesting a balance between caloric intake and expenditure.
 
-#### Date
-![Date Histogram](/Daily/Histogram/Date/Figure390.png)
-- It is unusual to have a histogram for dates, as they are not typically a variable that is distributed. This histogram might be indicating the frequency of data entries over time.
-
 #### Steps
 ![Steps Histogram](/Daily/Histogram/Steps/Figure398.png)
 - The histogram for steps taken is positively skewed, showing that most people take a moderate number of steps, with a few individuals taking significantly more. This is a common pattern for physical activity data.
@@ -297,7 +293,7 @@ Histograms for weekly data allow us to see the aggregated behavior over a longer
 - The histogram for the weekly mean difference in kcal shows a normal distribution centered around zero, similar to the daily net difference. This suggests that over a week, individuals tend to balance their caloric intake and expenditure.
 
 #### Weekly Body Weight loss %
-![Weekly Body Weight Loss Percentage Histogram](/Weekly/Histogram/Weekly%20Body%20Weight%20loss%20%/Figure121.png)
+![Weekly Body Weight Loss Percentage Histogram](/Weekly/Histogram/Weekly%20Body%20Weight%20loss%20%25/Figure121.png)
 - This histogram is skewed to the right, indicating that most individuals have a small percentage of weight loss per week, with a few experiencing higher percentages. This pattern is less evident in the daily weight histogram, which is more symmetric.
 
 #### Weekly average (kcals)
@@ -362,7 +358,7 @@ The weekly catplots allow for an examination of patterns and distributions over 
 - This catplot may show the weekly mean difference in kcals across different categories, such as participant groups or weeks in a study. It can help identify which groups or time periods have higher or lower mean caloric differences compared to the daily analysis, which might show more variability.
 
 #### Weekly Body Weight loss %
-![Weekly Body Weight Loss Percentage Catplot](/Weekly/Catplot/Weekly%20Body%20Weight%20loss%20%/Figure135.png)
+![Weekly Body Weight Loss Percentage Catplot](/Weekly/Catplot/Weekly%20Body%20Weight%20loss%20%25/Figure135.png)
 - The catplot for weekly body weight loss percentage likely displays the distribution of weight loss across various categories. Comparing to daily data, this weekly aggregation could reveal more consistent trends in weight loss that are not as apparent in daily fluctuations.
 
 #### Weekly average (kcals)
