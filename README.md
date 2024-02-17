@@ -1,4 +1,4 @@
-# To Run
+# Quickstart
 Run eda.py in python3 to give the below main menu:
 ``` Please enter: 
 1  - Understand Data
@@ -19,7 +19,7 @@ To then run weekly analysis, enter r to reset the columns, then 2b for the weekl
 The resultant from each step is output into there associated folders, e.g. Daily/Heatmap (which are created if they do not already exist).
 
 # Introduction
-Before the birth of my son I sought to lose some weight under the knowledge that weight management would be at the back of my mind during his first few months of life. I meticulously documented this 12 week 'shred' across MyFitnessPal and an Apple Numbers workbook, noting key values in relation to calorie intake and expenditure.
+Before the birth of my son I sought to lose some weight under the knowledge that weight management would be at the back of my mind during his first few months of his life. I meticulously documented this 12 week 'shred' across MyFitnessPal and an Apple Numbers workbook, noting key values in relation to calorie intake and expenditure.
 
 ## Motivation
 Now having this data I thought it an informative exercise to
@@ -254,10 +254,67 @@ In summary, the weekly data provides a broader view of participants’ behaviors
 
 ## Scatter Plot
 ### Daily Trends
+
+In analyzing the scatterplots, certain plots were more indicative of potential correlations, especially when considering the hue variable, which adds a dimension of categorization to the analysis. Below are the key findings from the plots that warranted further inspection.
+
+#### Noteworthy Scatterplots:
+
+- **Weight vs. Kcals in/out (Hue: Gym Sessions)**: These plots showed a clustering of data points that varied with the number of gym sessions. This suggests that gym activity may interact with the relationship between caloric intake/outtake and weight, potentially highlighting the role of exercise in weight management.
+
+- **Kcals out vs. Cardio (kcals from Fitbit) (Hue: Net Diff (kcals))**: There was a visible trend where individuals with higher net calorie deficits tended to have higher calories burned according to Fitbit data. This could indicate an effective tracking of increased physical activity leading to larger calorie deficits.
+
+- **Steps vs. Cardio (kcals from Fitbit) (Hue: Kcals in)**: The plot indicated a moderate correlation between steps and calories burned during cardio, differentiated by daily calorie intake. It suggests that those with higher caloric intake might also be more active, which could be related to higher energy availability.
+
+#### Omitted Scatterplots and Reasons:
+
+- **Scatterplots with no discernible patterns**: Some plots showed a random dispersion of points without any apparent correlation or interaction effect with the hue variable. These plots were omitted from detailed analysis as they are less likely to yield actionable insights without further statistical testing.
+
+- **Scatterplots with sparse data**: In cases where the data points were too sparse, it was challenging to draw any conclusions about correlations or the effect of the hue variable. These were also omitted as they do not provide a reliable basis for analysis.
+
+- **Overplotted Scatterplots**: Some scatterplots had significant overplotting, making it difficult to visually assess the distribution of data points and any potential correlation. These require further analysis with techniques such as transparency adjustment, jittering, or alternative visualization methods to properly interpret the data.
+
+#### Recommendations for Further Investigation:
+
+- **Statistical Testing**: For scatterplots indicating potential correlations, it is advisable to conduct statistical tests, such as Pearson or Spearman correlation coefficients, to quantify the strength and direction of the relationships.
+
+- **Regression Analysis**: Including the hue variable as a factor in regression models could provide insights into how it moderates the relationships between the primary variables.
+
+- **Subgroup Analysis**: For variables where the hue indicated meaningful differences, subgroup analysis could further explore the characteristics and behaviors of these distinct groups.
+
+The scatterplots suggest interesting relationships between daily activities, caloric balance, and weight, especially when considering additional factors such as gym sessions. However, these visual analyses should be augmented with rigorous statistical methods to confirm the findings and understand the underlying dynamics.
+
 ### Weekly Trends
+The scatterplot analysis for weekly data reflects the aggregation of daily activities into longer-term patterns. The following are key observations from the plots that showed potential correlations or were particularly influenced by the hue variable.
+
+#### Noteworthy Scatterplots:
+
+- **Weekly Cardio (kcals) vs. Weekly Steps (Hue: Weight)**: There was a more pronounced correlation in the weekly data for cardio activity and steps compared to the daily data. The inclusion of weight as a hue variable revealed a stratification where individuals with higher body weight had a different pattern of activity, suggesting a relationship between weight and exercise habits.
+
+- **Mean Weight vs. Weekly Average (kcals) (Hue: Net Diff (kcals))**: This plot showed a clearer trend on a weekly scale, with mean weight appearing to correlate with weekly calorie intake, especially when considering net calorie difference. It suggests that weekly dietary habits might have a more direct impact on weight fluctuations compared to daily variations.
+
+- **Median Weight vs. Weekly Body Weight Loss % (Hue: Gym Sessions)**: The presence of gym sessions as a hue showed that individuals with more frequent gym sessions had a notable weight loss percentage, which was not as apparent in the daily data. This could indicate that the benefits of regular exercise on weight loss are more observable on a weekly scale.
+
+#### Omitted Scatterplots and Reasons:
+
+- **Scatterplots with Indistinct Patterns**: Several plots did not show any clear correlation or interaction with the hue variable, which made them less informative for this analysis. Without clear trends, these plots do not contribute significantly to understanding the weekly habits and their outcomes.
+
+- **Scatterplots with Sparse Data Points**: As with the daily data, some weekly scatterplots suffered from sparsity, making it difficult to discern any reliable patterns. These were excluded from detailed analysis due to the risk of drawing misleading conclusions from insufficient data.
+
+- **Scatterplots with Overlapping Points**: Overlapping data points in some scatterplots obscured any potential patterns, especially concerning the hue variable. These require more sophisticated visualization techniques to interpret the data accurately.
+
+#### Comparative Insights:
+
+- The weekly data seems to smooth out the daily variability, revealing trends that are less clear when looking at daily behaviors. This is particularly evident in the relationship between caloric intake/outtake and weight metrics.
+
+- The role of exercise, as evidenced by gym sessions, seems more influential on a weekly basis. This might be due to the cumulative effect of exercise over a week being more measurable than day-to-day fluctuations.
+
+- Weekly patterns offer a more stable basis for analyzing lifestyle impacts on weight and activity levels, suggesting that long-term habits are more indicative of health outcomes than daily variations.
+
+The analysis of weekly scatterplots reinforces the importance of examining data over various time scales to capture different aspects of behavior and outcomes. While daily data provides granularity, weekly data offers a broader view, which may be more aligned with long-term goals such as weight management or fitness improvement.
 
 ## Histogram
 ### Daily Trends
+
 ### Weekly Trends
 
 ## Cat Plot
