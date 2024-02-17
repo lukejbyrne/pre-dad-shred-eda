@@ -31,15 +31,36 @@ The resultant from each step is output into there associated folders, e.g. Daily
 Before the birth of my son I sought to lose some weight under the knowledge that weight management would be at the back of my mind during his first few months of his life. I meticulously documented this 12 week 'shred' across MyFitnessPal and an Apple Numbers workbook, noting key values in relation to calorie intake and expenditure. Now having this data I thought it an informative exercise to learn from my mistakes for future 'cuts' / 'shreds' by find key measurements that influence expenditure and weigh loss.
 
 # Methodology
-This analysis covers a variety of analytical tools under the guise of Exploratory Data Analysis. In the vein of novel exploration, I opted to derive patterns and correlations from combinations of all data as opposed to seeking correlations between specific sets. Within the repo you will find the python file/s utilised for the data analysation preperations, as well as the resulting files which are analysed in the next chapter.
 
-The resulting files I mention are under 5 data analysation methods each for 2 sets of data. My original data had a combination of daily and weekly values. This I opted to seperate to look distinctly at Daily and then Weekly. Within each of these I analysed:
+The methodology for this exploratory data analysis (EDA) is designed to uncover patterns, correlations, and insights from the dataset in a structured manner. The analysis is performed using Python, leveraging popular libraries such as Pandas for data manipulation, and Seaborn along with Matplotlib for data visualization. The script `eda.py` outlines a comprehensive approach to explore the dataset through various analytical tools and visualization techniques. Here's a detailed breakdown of the methodology:
 
-1) Heatmap
-2) Pair Plot
-3) Scatter Plot
-4) Histogram
-5) Cat Plot
+## 1. Data Preparation
+- **Loading Data**: The dataset is loaded into a Pandas DataFrame from a CSV file, ensuring that the analysis starts with the raw, unmodified data.
+- **Data Cleaning**: The script offers options for cleaning the data based on its temporal resolution (daily or weekly). This step is crucial for preparing the data for accurate analysis by removing inconsistencies, handling missing values, and ensuring the data quality.
+
+## 2. Exploratory Data Analysis
+The EDA process is broken down into several steps, each focusing on different aspects of the data:
+
+### a. Understanding the Data
+- The initial step involves getting familiar with the basic structure of the dataset, including observing the first few and last few rows to understand the data's layout and content.
+
+### b. Cleaning the Data
+- Depending on the user's input, the data is cleaned considering its nature (daily or weekly), making it ready for further analysis.
+
+### c. Relationship Analysis
+The script facilitates relationship analysis through various visualization techniques, each offering unique insights into the data:
+
+- **Heatmap**: Used to visualize the correlation between different variables in the dataset, highlighting strong and weak relationships through color coding.
+- **Pair Plot**: Provides pairwise scatter plots for all variables, offering a comprehensive view of their interactions and distributions.
+- **Scatter Plot**: Focuses on the relationship between two variables by plotting their values against each other, allowing the identification of patterns or trends.
+- **Histogram**: Visualizes the distribution of a single variable, showing the frequency of data points within specific ranges.
+- **Cat Plot**: Categorizes data points based on a categorical variable and shows their distribution, using box plots or similar visualizations.
+
+## 3. Data Visualization Output
+- The script is designed to save each visualization as a PNG file within a structured directory hierarchy, organized by the type of analysis (e.g., Heatmap, Pairplot) and the temporal resolution of the data (daily or weekly). This organization aids in the systematic review of the generated visualizations and supports a comprehensive analysis.
+
+## 4. User Interaction
+- The script employs a simple command-line interface allowing users to select the desired analysis step by entering specific commands. This interactive approach ensures flexibility in the analysis process, catering to different analytical needs and preferences.
 
 # Data Analysis
 ## Heatmap Analysis
