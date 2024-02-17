@@ -1,3 +1,35 @@
+# Table of Contents
+
+1. [TL;DR](#TLDR)
+2. [Quickstart](#Quickstart)
+3. [Introduction](#Introduction)
+4. [Methodology](#Methodology)
+   - 4.1. [Data Preparation](#Data-Preparation)
+   - 4.2. [Exploratory Data Analysis](#Exploratory-Data-Analysis)
+     - 4.2.1. [Understanding the Data](#Understanding-the-Data)
+     - 4.2.2. [Cleaning the Data](#Cleaning-the-Data)
+     - 4.2.3. [Relationship Analysis](#Relationship-Analysis)
+   - 4.3. [Data Visualization Output](#Data-Visualization-Output)
+   - 4.4. [User Interaction](#User-Interaction)
+5. [Data Analysis](#Data-Analysis)
+   - 5.1. [Heatmap Analysis](#Heatmap-Analysis)
+     - 5.1.1. [Daily Trends](#Daily-Trends)
+     - 5.1.2. [Weekly Trends](#Weekly-Trends)
+   - 5.2. [Pair Plot](#Pair-Plot)
+     - 5.2.1. [Daily Trends](#Daily-Trends-1)
+     - 5.2.2. [Weekly Trends](#Weekly-Trends-1)
+   - 5.3. [Scatter Plot](#Scatter-Plot)
+     - 5.3.1. [Daily Trends](#Daily-Trends-2)
+     - 5.3.2. [Weekly Trends](#Weekly-Trends-2)
+   - 5.4. [Histogram](#Histogram)
+     - 5.4.1. [Daily Trends](#Daily-Trends-3)
+     - 5.4.2. [Weekly Trends](#Weekly-Trends-3)
+   - 5.5. [Cat Plot](#Cat-Plot)
+     - 5.5.1. [Daily Trend](#Daily-Trend)
+     - 5.5.2. [Weekly Trends](#Weekly-Trends-4)
+6. [Conclusion](#Conclusion)
+   - 6.1. [TODO: Improvements](#TODO-Improvements)
+
 # TL;DR
 In this analysis of a 12-week weight management journey documented through MyFitnessPal and Apple Numbers, we employed Exploratory Data Analysis (EDA) techniques to dissect daily and weekly data sets on calorie intake, expenditure, and physical activity.
 
